@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KIN-HA Reserve - Architecture Horizons</title>
+  <style>
+    :root {
+      --forest: #1a3a1a;
+      --obsidian: #0d0d0d;
+      --limestone: #f8f8f5;
+      --cenote: #4a9b8e;
+      --gold: #d4a373;
+      --terracotta: #d4744c;
+      --ink: #182018;
+      --muted: #5a6559;
+      --line: #d9ded6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--limestone);
+      line-height: 1.5;
+    }
+    header {
+      background: linear-gradient(135deg, var(--obsidian), var(--forest));
+      color: var(--limestone);
+      padding: 48px 7vw 36px;
+      border-bottom: 6px solid var(--gold);
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0;
+      max-width: 980px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 6vw, 78px);
+      line-height: 0.98;
+      font-weight: 500;
+    }
+    .subtitle {
+      max-width: 820px;
+      margin: 18px 0 0;
+      color: rgba(248, 248, 245, .82);
+      font-size: 18px;
+    }
+    main { padding: 34px 7vw 54px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      align-items: stretch;
+    }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(13, 13, 13, .07);
+    }
+    .panel h2 {
+      margin: 0;
+      padding: 18px 20px;
+      color: var(--limestone);
+      background: var(--forest);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 26px;
+      font-weight: 500;
+    }
+    .panel.platform h2 { background: var(--obsidian); }
+    .panel-body {
+      display: grid;
+      gap: 14px;
+      padding: 18px;
+    }
+    .item {
+      min-height: 118px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--cenote);
+      border-radius: 6px;
+      background: #fbfcfa;
+    }
+    .platform .item { border-left-color: var(--gold); }
+    .item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--obsidian);
+      font-size: 16px;
+    }
+    .item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .flow {
+      margin-top: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 20px;
+    }
+    .flow h2 {
+      margin: 0 0 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      font-size: 28px;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(120px, 1fr));
+      gap: 10px;
+    }
+    .step {
+      display: grid;
+      place-items: center;
+      min-height: 88px;
+      padding: 12px;
+      color: var(--limestone);
+      background: var(--forest);
+      border-radius: 6px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .step:nth-child(even) { background: var(--cenote); }
+    .decision {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .choice {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+    .choice b {
+      display: inline-grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      margin-right: 8px;
+      color: var(--obsidian);
+      background: var(--gold);
+      border-radius: 50%;
+    }
+    .choice h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    .choice p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer {
+      padding: 0 7vw 42px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 860px) {
+      .grid,
+      .decision,
+      .steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">The First 100 / Xaman Ek</p>
+    <h1>Arquitectura en dos horizontes</h1>
+    <p class="subtitle">Validemos primero la frontera entre lo que debe vender y operar el MVP, y lo que debe quedar preparado para la plataforma completa de KIN-HA Reserve.</p>
+  </header>
+
+  <main>
+    <section class="grid" aria-label="Horizontes de arquitectura">
+      <article class="panel">
+        <h2>MVP 0.1 - Launch y conversion</h2>
+        <div class="panel-body">
+          <div class="item">
+            <strong>Landing bilingue</strong>
+            <p>Campana The First 100 / Xaman Ek, CTAs a Stripe y contacto con Luis.</p>
+          </div>
+          <div class="item">
+            <strong>Stripe checkout</strong>
+            <p>$100 anual y $280 por 3 anos. Webhook crea custodian y numero founder.</p>
+          </div>
+          <div class="item">
+            <strong>Dashboard minimo</strong>
+            <p>Founder number, status "tree pending", certificado provisional y llamada.</p>
+          </div>
+          <div class="item">
+            <strong>Admin operativo</strong>
+            <p>Ver pagos, custodios, numeros, status de asignacion y notas internas.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel platform">
+        <h2>Plataforma 1.0 - Reserva viva</h2>
+        <div class="panel-body">
+          <div class="item">
+            <strong>QR y arbol real</strong>
+            <p>Especie, GPS, placa, fotos, ubicacion y bitacora biologica.</p>
+          </div>
+          <div class="item">
+            <strong>Mapa interactivo</strong>
+            <p>66 ha, 100 pins, cenotes, sectores, camaras trampa y privacidad.</p>
+          </div>
+          <div class="item">
+            <strong>Wildlife y reportes</strong>
+            <p>Sightings, videos, salud de cenotes, impacto CO2 y actualizaciones.</p>
+          </div>
+          <div class="item">
+            <strong>Comunidad y expansion</strong>
+            <p>Visitas, membresias, sponsors de camaras, partners ESG y nuevas reservas.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="flow">
+      <h2>Como se conectan</h2>
+      <div class="steps">
+        <div class="step">Landing</div>
+        <div class="step">Stripe</div>
+        <div class="step">Custodian record</div>
+        <div class="step">Dashboard now</div>
+        <div class="step">Tree/GPS later</div>
+      </div>
+    </section>
+
+    <section class="decision" aria-label="Opciones de decision">
+      <article class="choice">
+        <h3><b>A</b> La frontera esta bien</h3>
+        <p>El MVP vende y opera; la plataforma completa queda modelada pero no construida de golpe.</p>
+      </article>
+      <article class="choice">
+        <h3><b>B</b> El MVP necesita mas</h3>
+        <p>Incluyamos mas del QR, mapa o asignacion de arbol desde la primera version.</p>
+      </article>
+      <article class="choice">
+        <h3><b>C</b> El MVP debe ser mas ligero</h3>
+        <p>Reducimos dashboard/admin y priorizamos landing, checkout y captura de confianza.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    Responde en el chat con A, B o C para validar la frontera del producto.
+  </footer>
+</body>
+</html>

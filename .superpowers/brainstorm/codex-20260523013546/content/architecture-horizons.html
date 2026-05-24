@@ -1,0 +1,96 @@
+<h2>Arquitectura en dos horizontes</h2>
+<p class="subtitle">Validemos primero la frontera entre lo que debe vender y operar el MVP, y lo que debe quedar preparado para la plataforma completa.</p>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">MVP 0.1 - Launch y conversion</div>
+    <div class="mockup-body">
+      <div style="display:grid;gap:12px">
+        <div class="placeholder" style="height:auto;padding:14px;text-align:left">
+          <strong>Landing bilingue</strong><br>
+          Campana The First 100 / Xaman Ek, CTAs a Stripe y contacto con Luis.
+        </div>
+        <div class="placeholder" style="height:auto;padding:14px;text-align:left">
+          <strong>Stripe checkout</strong><br>
+          $100 anual y $280 por 3 anos. Webhook crea custodian y numero founder.
+        </div>
+        <div class="placeholder" style="height:auto;padding:14px;text-align:left">
+          <strong>Dashboard minimo</strong><br>
+          Founder number, status "tree pending", certificado provisional y llamada.
+        </div>
+        <div class="placeholder" style="height:auto;padding:14px;text-align:left">
+          <strong>Admin operativo</strong><br>
+          Ver pagos, custodios, numeros, status de asignacion y notas internas.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">Plataforma 1.0 - Reserva viva</div>
+    <div class="mockup-body">
+      <div style="display:grid;gap:12px">
+        <div class="placeholder" style="height:auto;padding:14px;text-align:left">
+          <strong>QR y arbol real</strong><br>
+          Especie, GPS, placa, fotos, ubicacion y bitacora biologica.
+        </div>
+        <div class="placeholder" style="height:auto;padding:14px;text-align:left">
+          <strong>Mapa interactivo</strong><br>
+          66 ha, 100 pins, cenotes, sectores, camaras trampa y privacidad.
+        </div>
+        <div class="placeholder" style="height:auto;padding:14px;text-align:left">
+          <strong>Wildlife y reportes</strong><br>
+          Sightings, videos, salud de cenotes, impacto CO2 y actualizaciones.
+        </div>
+        <div class="placeholder" style="height:auto;padding:14px;text-align:left">
+          <strong>Comunidad y expansion</strong><br>
+          visitas, membresias, sponsors de camaras, partners ESG y nuevas reservas.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Como se conectan</h3>
+  <div class="mockup">
+    <div class="mockup-body">
+      <div style="display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;text-align:center">
+        <div class="placeholder" style="min-width:150px;height:auto;padding:12px">Landing</div>
+        <div>-></div>
+        <div class="placeholder" style="min-width:150px;height:auto;padding:12px">Stripe</div>
+        <div>-></div>
+        <div class="placeholder" style="min-width:150px;height:auto;padding:12px">Custodian record</div>
+        <div>-></div>
+        <div class="placeholder" style="min-width:150px;height:auto;padding:12px">Dashboard now</div>
+        <div>-></div>
+        <div class="placeholder" style="min-width:150px;height:auto;padding:12px">Tree/GPS later</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>Elige una lectura</h3>
+<div class="options">
+  <div class="option" data-choice="approve-boundary" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>La frontera esta bien</h3>
+      <p>El MVP vende y opera; la plataforma completa queda modelada pero no construida de golpe.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="more-mvp" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>El MVP necesita mas</h3>
+      <p>Incluyamos mas del QR, mapa o asignacion de arbol desde la primera version.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="leaner-mvp" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>El MVP debe ser mas ligero</h3>
+      <p>Reducimos dashboard/admin y priorizamos landing, checkout y captura de confianza.</p>
+    </div>
+  </div>
+</div>
