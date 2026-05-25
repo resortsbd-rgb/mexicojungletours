@@ -1,14 +1,14 @@
 # Mexico Jungle Tours
 
-Static bilingual destination landing page for Mexico Jungle Tours, focused on clean, natural Kin-Ha cenote and jungle bookings through WhatsApp.
+Static bilingual SEO website for Mexico Jungle Tours, an independent tour operator / booking brand for Puerto Morelos jungle routes, Kin-Ha and Blanca Flor cenote access, ATV, ziplines, horseback riding and pickup coordination.
 
 ## Stack
 
 - Static HTML
-- TailwindCSS via CDN
-- Inline CSS and small vanilla JavaScript for language toggle, package filters, lazy map loading, reveal motion and mobile CTAs
+- Shared CSS in `assets/site.css`
+- Small vanilla JavaScript in `assets/site.js` for WhatsApp links, package filters, lazy map loading and mobile CTAs
 - GitHub Pages and Cloudflare static hosting compatible
-- No build step
+- No build step required for deployment
 
 ## Preview locally
 
@@ -20,6 +20,20 @@ Open `http://localhost:8080/`.
 
 The site can also be opened directly from `index.html`, but a tiny local server is better for testing asset paths and map behavior.
 
+## URL architecture
+
+- `/` x-default homepage
+- `/en/`
+- `/es/`
+- `/en/atv-zipline-cenote-tour-cancun/`
+- `/es/tour-atv-tirolesa-cenotes-cancun/`
+- `/en/puerto-morelos-cenote-tour/`
+- `/es/cenotes-puerto-morelos/`
+- `/en/horseback-riding-cenote-tour-puerto-morelos/`
+- `/es/caballos-y-cenotes-puerto-morelos/`
+- `/en/ruta-de-los-cenotes-puerto-morelos/`
+- `/es/ruta-de-los-cenotes-puerto-morelos/`
+
 ## Live wiring before launch
 
 - WhatsApp Business number is wired as `https://wa.me/529982053527`.
@@ -28,12 +42,13 @@ The site can also be opened directly from `index.html`, but a tiny local server 
 - Add Stripe or checkout links only when real payment links are available.
 - Add confirmed business address, coordinates and hours to structured data if they should be public.
 - Confirm final legal wording for the optional preservation contribution before launch.
+- Keep Mexico Jungle Tours positioned as an independent tour operator / booking brand, not the official Cenote Kin-Ha brand.
 
 ## Current packages
 
 - Kin-Ha and Blanca Flor Cenotes: Adult MXN $500 / USD $30, child MXN $300 / USD $20
 - ATV + Jungle Zipline: Adult MXN $1,200 / USD $70, child MXN $700 / USD $40
-- Horseback & Cenotes: Adult MXN $1,200 / USD $70, child MXN $700 / USD $40
+- Horseback Riding & Cenotes: Adult MXN $1,200 / USD $70, child MXN $700 / USD $40
 - Kin-Ha Signature Experience: Adult MXN $1,400 / USD $85, child MXN $800 / USD $50
 
 ## SEO focus
@@ -45,3 +60,7 @@ The site can also be opened directly from `index.html`, but a tiny local server 
 - Horseback riding Puerto Morelos
 - Zipline and cenote tour Riviera Maya
 - Authentic jungle adventure Riviera Maya
+
+## Maintenance
+
+The checked-in HTML files are deployment-ready. `scripts/build-seo-pages.cjs` is a maintenance helper used to regenerate the static pages from shared copy if package details or metadata change.
