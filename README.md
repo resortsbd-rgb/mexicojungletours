@@ -24,7 +24,7 @@ The site can also be opened directly from `index.html`, but a tiny local server 
 
 - WhatsApp Business number is wired as `https://wa.me/529982053527`.
 - Keep all imagery sourced from real Kin-Ha files in `assets/`.
-- Replace the static GHL/CRM form placeholder only when the approved embed is ready.
+- Add an approved GHL/CRM embed only when the booking form is ready.
 - Add Stripe or checkout links only when real payment links are available.
 - Add confirmed business address, coordinates and hours to structured data if they should be public.
 - Confirm final legal wording for the optional preservation contribution before launch.
@@ -33,8 +33,8 @@ The site can also be opened directly from `index.html`, but a tiny local server 
 
 - Kin-Ha and Blanca Flor Cenotes: Adult MXN $500 / USD $30, child MXN $300 / USD $20
 - ATV + Jungle Zipline: Adult MXN $1,200 / USD $70, child MXN $700 / USD $40
-- Horseback Riding and Cenotes: Adult MXN $1,200 / USD $70, child MXN $700 / USD $40
-- Complete Kin-Ha Experience: Adult MXN $1,400 / USD $85, child MXN $800 / USD $50
+- Horseback & Cenotes: Adult MXN $1,200 / USD $70, child MXN $700 / USD $40
+- Kin-Ha Signature Experience: Adult MXN $1,400 / USD $85, child MXN $800 / USD $50
 
 ## SEO focus
 
