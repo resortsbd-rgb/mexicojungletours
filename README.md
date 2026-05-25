@@ -28,7 +28,7 @@ Open `http://localhost:8080/`.
 
 - Kin-Ha & Blanca Flor Cenotes: Adult MXN $500 / USD $30, child MXN $300 / USD $20
 - ATV + Zipline Jungle Expedition: Adult MXN $1,200 / USD $70, child MXN $700 / USD $40
-- Horseback & Cenotes Experience: Adult MXN $1,200 / USD $70, child MXN $700 / USD $40
+- Horseback & Cenotes: Adult MXN $1,200 / USD $70, child MXN $700 / USD $40
 - Complete Kin-Ha Experience: Adult MXN $1,400 / USD $85, child MXN $800 / USD $50
 
 ## SEO focus

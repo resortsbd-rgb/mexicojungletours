@@ -7,20 +7,20 @@
     <meta name="description" content="Natural cenotes, real jungle access and Kin-Ha route experiences in Puerto Morelos. ATV cenote tour Cancun access, cenote tour Puerto Morelos, zipline and horseback routes near Playa del Carmen.">
     <meta name="keywords" content="cenote tour Puerto Morelos, ATV cenote tour Cancun, Ruta de los Cenotes tour, cenote tour near Playa del Carmen, horseback riding Puerto Morelos, zipline and cenote tour Riviera Maya, authentic jungle adventure Riviera Maya">
     <link rel="canonical" href="https://mexicojungletours.com/">
+    <link rel="icon" href="data:,">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mexicojungletours.com/">
     <meta property="og:title" content="Mexico Jungle Tours | Natural Cenotes. Real Jungle Access.">
     <meta property="og:description" content="The Kin-Ha route in Puerto Morelos with ATV trails, zipline platforms, horseback riding, cenote swimming and hotel pickup.">
-    <meta property="og:image" content="https://mexicojungletours.com/assets/Cenote%20Kinha.JPG">
+    <meta property="og:image" content="https://mexicojungletours.com/assets/Cenote%20Blanca%20Flor.JPG">
     <meta property="og:site_name" content="Mexico Jungle Tours">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mexico Jungle Tours | Kin-Ha Route Experiences">
     <meta name="twitter:description" content="Kin-Ha cenotes, shaded jungle trails, ATV, zipline and horseback experiences near Cancun, Playa del Carmen and Puerto Morelos.">
-    <meta name="twitter:image" content="https://mexicojungletours.com/assets/Cenote%20Kinha.JPG">
+    <meta name="twitter:image" content="https://mexicojungletours.com/assets/Cenote%20Blanca%20Flor.JPG">
     <meta name="theme-color" content="#0B0F0C">
-    <link rel="icon" href="data:,">
 
     <script src="https://cdn.tailwindcss.com" defer></script>
     <script>
@@ -55,11 +55,14 @@
     <style>
       html {
         scroll-behavior: smooth;
+        scroll-padding-top: 5rem;
+        overflow-x: hidden;
       }
 
       body {
         background: #0B0F0C;
         color: #F5F5F2;
+        overflow-x: hidden;
       }
 
       html[data-site-lang="en"] [data-lang="es"],
@@ -81,9 +84,9 @@
 
       .hero-poster {
         background-image:
-          linear-gradient(90deg, rgba(11, 15, 12, 0.96) 0%, rgba(11, 15, 12, 0.76) 48%, rgba(11, 15, 12, 0.24) 100%),
-          linear-gradient(180deg, rgba(11, 15, 12, 0.08) 0%, rgba(11, 15, 12, 0.94) 100%),
-          url('assets/Cenote%20Kinha.JPG');
+          linear-gradient(90deg, rgba(11, 15, 12, 0.96) 0%, rgba(11, 15, 12, 0.76) 48%, rgba(11, 15, 12, 0.28) 100%),
+          linear-gradient(180deg, rgba(11, 15, 12, 0.12) 0%, rgba(11, 15, 12, 0.94) 100%),
+          url('assets/Cenote%20Blanca%20Flor.JPG');
         background-position: center;
         background-size: cover;
       }
@@ -93,7 +96,7 @@
           linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
           linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
         background-size: 44px 44px;
-        opacity: 0.18;
+        opacity: 0.16;
       }
 
       .glass-panel {
@@ -118,9 +121,8 @@
         transform: translateY(0);
       }
 
-      .parallax-layer {
-        transform: translate3d(0, calc(var(--parallax, 0) * 1px), 0);
-        transition: transform 80ms linear;
+      .package-card.is-hidden {
+        display: none;
       }
 
       .no-scrollbar {
@@ -132,10 +134,6 @@
         display: none;
       }
 
-      .package-card.is-hidden {
-        display: none;
-      }
-
       .lang-button[aria-pressed="true"],
       .filter-button[aria-pressed="true"] {
         background: #C9A961;
@@ -144,9 +142,23 @@
       }
 
       .map-card iframe {
-        min-height: 320px;
+        min-height: 340px;
         width: 100%;
         border: 0;
+      }
+
+      #floating-whatsapp {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        #floating-whatsapp {
+          display: flex;
+        }
+
+        #sticky-booking-bar {
+          display: none;
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -154,8 +166,7 @@
           scroll-behavior: auto;
         }
 
-        .reveal,
-        .parallax-layer {
+        .reveal {
           opacity: 1;
           transform: none;
           transition: none;
@@ -179,7 +190,7 @@
             "@id": "https://mexicojungletours.com/#localbusiness",
             "name": "Mexico Jungle Tours",
             "url": "https://mexicojungletours.com/",
-            "image": "https://mexicojungletours.com/assets/Cenote%20Kinha.JPG",
+            "image": "https://mexicojungletours.com/assets/Cenote%20Blanca%20Flor.JPG",
             "description": "Commercial acquisition brand for authentic Kin-Ha cenote and jungle experiences on Puerto Morelos' Ruta de los Cenotes.",
             "telephone": "+52 998 205 3527",
             "address": {
@@ -226,7 +237,7 @@
                 },
                 {
                   "@type": "Offer",
-                  "name": "Horseback & Cenotes Experience",
+                  "name": "Horseback & Cenotes",
                   "price": "1200",
                   "priceCurrency": "MXN",
                   "description": "Adult MXN $1,200 / USD $70. Child MXN $700 / USD $40."
@@ -295,10 +306,10 @@
               },
               {
                 "@type": "Question",
-                "name": "Is lunch included?",
+                "name": "Is regional food included?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Regional Mexican lunch or snacks are included depending on the selected package."
+                  "text": "Regional Mexican food or snacks are included depending on the selected package."
                 }
               },
               {
@@ -354,10 +365,10 @@
         <div class="hidden items-center gap-7 text-sm font-medium text-jungle-mist/78 lg:flex">
           <a class="focus-ring hover:text-jungle-gold" href="#experiences"><span data-lang="en">Experiences</span><span data-lang="es">Experiencias</span></a>
           <a class="focus-ring hover:text-jungle-gold" href="#story">Kin-Ha</a>
-          <a class="focus-ring hover:text-jungle-gold" href="#pricing"><span data-lang="en">Pricing</span><span data-lang="es">Precios</span></a>
+          <a class="focus-ring hover:text-jungle-gold" href="#experiences"><span data-lang="en">Packages</span><span data-lang="es">Paquetes</span></a>
           <a class="focus-ring hover:text-jungle-gold" href="#location"><span data-lang="en">Location</span><span data-lang="es">Ubicación</span></a>
           <a class="focus-ring hover:text-jungle-gold" href="#faq">FAQ</a>
-          <a class="focus-ring hover:text-jungle-gold" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" data-wa-general>WhatsApp</a>
+          <a class="focus-ring hover:text-jungle-gold" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" data-wa-general>WhatsApp</a>
         </div>
         <div class="flex items-center gap-2">
           <div class="rounded-md border border-white/10 p-1" aria-label="Language selector">
@@ -374,15 +385,13 @@
 
     <main id="main">
       <section class="hero-poster relative flex min-h-[100svh] items-end overflow-hidden pt-24" aria-labelledby="hero-title">
-        <video class="absolute inset-0 h-full w-full object-cover opacity-0" muted autoplay loop playsinline poster="assets/Cenote%20Kinha.JPG" aria-hidden="true"></video>
-        <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,15,12,0.96),rgba(11,15,12,0.72)_48%,rgba(11,15,12,0.22)),linear-gradient(180deg,rgba(11,15,12,0.1),rgba(11,15,12,0.92))]"></div>
+        <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,15,12,0.96),rgba(11,15,12,0.72)_48%,rgba(11,15,12,0.25)),linear-gradient(180deg,rgba(11,15,12,0.08),rgba(11,15,12,0.94))]"></div>
         <div class="cinema-grain absolute inset-0"></div>
-        <div class="parallax-layer absolute right-[-7rem] top-20 h-80 w-80 rounded-full bg-jungle-cenote/18 blur-3xl" data-parallax="0.14" aria-hidden="true"></div>
         <div class="section-shell relative z-10 w-full pb-28 md:pb-20">
           <div class="max-w-4xl reveal" data-reveal>
             <p class="mb-5 inline-flex rounded-md border border-jungle-cenote/40 bg-jungle-black/54 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-jungle-cenote backdrop-blur">
-              <span data-lang="en">The Kin-Ha route in Puerto Morelos</span>
-              <span data-lang="es">La ruta Kin-Ha en Puerto Morelos</span>
+              <span data-lang="en">THE KIN-HA ROUTE IN PUERTO MORELOS</span>
+              <span data-lang="es">LA RUTA KIN-HA EN PUERTO MORELOS</span>
             </p>
             <h1 id="hero-title" class="font-display text-5xl leading-[0.96] text-jungle-mist sm:text-6xl lg:text-7xl">
               <span data-lang="en">Natural Cenotes. Real Jungle Access. The Kin-Ha Route.</span>
@@ -390,14 +399,10 @@
             </h1>
             <p class="mt-6 max-w-2xl text-lg leading-8 text-jungle-mist/84 sm:text-xl">
               <span data-lang="en">ATV trails, zipline platforms, horseback riding and natural cenote swimming in Puerto Morelos, with pickup from Cancun, Playa del Carmen and Puerto Morelos.</span>
-              <span data-lang="es">ATV, tirolesas, paseos a caballo y nado en cenotes naturales en Puerto Morelos, con transportación desde Cancún, Playa del Carmen y Puerto Morelos.</span>
-            </p>
-            <p class="mt-5 inline-flex rounded-md border border-jungle-gold/40 bg-jungle-gold/12 px-4 py-3 text-sm font-bold text-jungle-gold">
-              <span data-lang="en">From USD $30 / MXN $500</span>
-              <span data-lang="es">Desde MXN $500 / USD $30</span>
+              <span data-lang="es">ATV, tirolesas, paseos a caballo y nado en cenotes naturales en Puerto Morelos, con pickup desde Cancún, Playa del Carmen y Puerto Morelos.</span>
             </p>
             <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md bg-jungle-gold px-6 py-3 text-base font-bold text-jungle-black shadow-glow transition hover:bg-[#E1C271]" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" data-wa-general>
+              <a class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md bg-jungle-gold px-6 py-3 text-base font-bold text-jungle-black shadow-glow transition hover:bg-[#E1C271]" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" data-wa-general>
                 <span data-lang="en">Reserve on WhatsApp</span>
                 <span data-lang="es">Reservar por WhatsApp</span>
               </a>
@@ -413,9 +418,9 @@
       <section class="border-y border-white/10 bg-jungle-deep" aria-label="Value chips">
         <div class="section-shell no-scrollbar flex gap-3 overflow-x-auto py-4 text-center text-xs font-semibold uppercase tracking-[0.14em] text-jungle-mist/82 sm:grid sm:grid-cols-3 sm:gap-px lg:grid-cols-6">
           <div class="shrink-0 rounded-md border border-white/10 px-4 py-3 sm:rounded-none sm:border-0"><span data-lang="en">Small-group routes</span><span data-lang="es">Rutas en grupos pequeños</span></div>
-          <div class="shrink-0 rounded-md border border-white/10 px-4 py-3 sm:rounded-none sm:border-0"><span data-lang="en">Certified bilingual guides</span><span data-lang="es">Guías bilingües certificados</span></div>
-          <div class="shrink-0 rounded-md border border-white/10 px-4 py-3 sm:rounded-none sm:border-0"><span data-lang="en">Regional lunch available</span><span data-lang="es">Lunch regional disponible</span></div>
-          <div class="shrink-0 rounded-md border border-white/10 px-4 py-3 sm:rounded-none sm:border-0"><span data-lang="en">Lockers & rest areas</span><span data-lang="es">Lockers y áreas de descanso</span></div>
+          <div class="shrink-0 rounded-md border border-white/10 px-4 py-3 sm:rounded-none sm:border-0"><span data-lang="en">Certified bilingual guides</span><span data-lang="es">Guías bilingües certificadas</span></div>
+          <div class="shrink-0 rounded-md border border-white/10 px-4 py-3 sm:rounded-none sm:border-0"><span data-lang="en">Regional food available</span><span data-lang="es">Comida regional disponible</span></div>
+          <div class="shrink-0 rounded-md border border-white/10 px-4 py-3 sm:rounded-none sm:border-0"><span data-lang="en">Lockers & rest areas</span><span data-lang="es">Casilleros y áreas de descanso</span></div>
           <div class="shrink-0 rounded-md border border-white/10 px-4 py-3 sm:rounded-none sm:border-0"><span data-lang="en">Cancun / Playa / Puerto Morelos pickup</span><span data-lang="es">Pickup Cancún / Playa / Puerto Morelos</span></div>
           <div class="shrink-0 rounded-md border border-white/10 px-4 py-3 sm:rounded-none sm:border-0"><span data-lang="en">Kin-Ha & Blanca Flor cenotes</span><span data-lang="es">Cenotes Kin-Ha y Blanca Flor</span></div>
         </div>
@@ -423,21 +428,19 @@
 
       <section id="experiences" class="bg-jungle-black py-16 sm:py-24" aria-labelledby="experiences-title">
         <div class="section-shell">
-          <div class="reveal flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between" data-reveal>
-            <div class="max-w-3xl">
-              <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-gold">
-                <span data-lang="en">Choose Your Kin-Ha Route</span>
-                <span data-lang="es">Elige tu ruta Kin-Ha</span>
-              </p>
-              <h2 id="experiences-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl">
-                <span data-lang="en">Clear packages. Real terrain. Fast booking.</span>
-                <span data-lang="es">Paquetes claros. Terreno real. Reserva rápida.</span>
-              </h2>
-            </div>
-            <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md border border-jungle-cenote/60 px-5 py-3 text-sm font-bold text-jungle-mist transition hover:bg-jungle-cenote/14" href="#pricing">
-              <span data-lang="en">Compare packages</span>
-              <span data-lang="es">Comparar paquetes</span>
-            </a>
+          <div class="reveal max-w-3xl" data-reveal>
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-gold">
+              <span data-lang="en">CHOOSE YOUR KIN-HA ROUTE</span>
+              <span data-lang="es">ELIGE TU RUTA KIN-HA</span>
+            </p>
+            <h2 id="experiences-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl">
+              <span data-lang="en">Four ways to experience real cenotes and jungle access.</span>
+              <span data-lang="es">Cuatro formas de vivir cenotes y selva real.</span>
+            </h2>
+            <p class="mt-4 max-w-2xl text-base leading-7 text-jungle-mist/72">
+              <span data-lang="en">Compare the routes, confirm pickup and reserve on WhatsApp with the team.</span>
+              <span data-lang="es">Compara las rutas, confirma pickup y reserva por WhatsApp con el equipo.</span>
+            </p>
           </div>
 
           <div class="reveal no-scrollbar mt-8 flex gap-3 overflow-x-auto" data-reveal aria-label="Package filters">
@@ -450,78 +453,73 @@
 
           <div class="mt-10 grid gap-5 lg:grid-cols-2">
             <article class="package-card reveal overflow-hidden rounded-md border border-white/10 bg-jungle-deep/72 transition hover:-translate-y-1 hover:border-jungle-gold/50 hover:shadow-glow" data-reveal data-package-type="cenotes">
-              <img class="h-64 w-full object-cover" src="assets/Cenote%20Blanca%20Flor.JPG" alt="Cenote Blanca Flor water and jungle" loading="lazy">
+              <img class="h-72 w-full object-cover" src="assets/Cenote%20Blanca%20Flor.JPG" alt="Cenote Blanca Flor water and jungle" loading="lazy">
               <div class="p-5 sm:p-6">
-                <p class="text-xs font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Cenotes only</span><span data-lang="es">Solo cenotes</span></p>
+                <p class="text-xs font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Natural water route</span><span data-lang="es">Ruta de agua natural</span></p>
                 <h3 class="mt-2 font-display text-3xl text-jungle-mist"><span data-lang="en">Kin-Ha & Blanca Flor Cenotes</span><span data-lang="es">Cenotes Kin-Ha y Blanca Flor</span></h3>
-                <p class="mt-3 text-sm leading-6 text-jungle-mist/72"><span data-lang="en">Access to Cenote Kin-Ha + Blanca Flor. Snorkeling and certified guide included.</span><span data-lang="es">Acceso a Cenote Kin-Ha + Blanca Flor. Snorkel y guía certificado incluido.</span></p>
-                <p class="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-jungle-mist/50"><span data-lang="en">Duration</span><span data-lang="es">Duración</span></p>
-                <p class="mt-1 text-sm text-jungle-mist/76"><span data-lang="en">Flexible cenote route</span><span data-lang="es">Ruta flexible de cenotes</span></p>
-                <div class="mt-5 grid grid-cols-2 gap-3">
-                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="text-xs uppercase tracking-[0.16em] text-jungle-mist/50"><span data-lang="en">Adult</span><span data-lang="es">Adulto</span></p><p class="mt-1 font-bold text-jungle-gold">MXN $500 / USD $30</p></div>
-                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="text-xs uppercase tracking-[0.16em] text-jungle-mist/50"><span data-lang="en">Child</span><span data-lang="es">Menor</span></p><p class="mt-1 font-bold text-jungle-gold">MXN $300 / USD $20</p></div>
+                <p class="mt-3 text-sm leading-6 text-jungle-mist/72"><span data-lang="en">Freshwater cenote access, limestone formations, guided swimming and quiet time inside the route.</span><span data-lang="es">Acceso a cenotes de agua dulce, formaciones de piedra caliza, nado guiado y tiempo tranquilo dentro de la ruta.</span></p>
+                <div class="mt-5 grid gap-3 sm:grid-cols-2">
+                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="font-bold text-jungle-gold"><span data-lang="en">Adult:</span><span data-lang="es">Adulto:</span> MXN $500 / USD $30</p></div>
+                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="font-bold text-jungle-gold"><span data-lang="en">Child:</span><span data-lang="es">Menor:</span> MXN $300 / USD $20</p></div>
                 </div>
                 <p class="mt-3 text-xs text-jungle-mist/58"><span data-lang="en">Child pricing applies under 1.20m height.</span><span data-lang="es">Precio de menor aplica midiendo menos de 1.20m.</span></p>
                 <p class="mt-5 text-sm font-bold text-jungle-mist"><span data-lang="en">Includes</span><span data-lang="es">Incluye</span></p>
                 <ul class="mt-3 grid gap-2 text-sm text-jungle-mist/70 sm:grid-cols-2">
                   <li><span data-lang="en">Kin-Ha cenote access</span><span data-lang="es">Acceso a cenote Kin-Ha</span></li>
                   <li><span data-lang="en">Blanca Flor cenote access</span><span data-lang="es">Acceso a cenote Blanca Flor</span></li>
-                  <li><span data-lang="en">Snorkeling</span><span data-lang="es">Snorkel</span></li>
-                  <li><span data-lang="en">Certified guide</span><span data-lang="es">Guía certificado</span></li>
-                  <li><span data-lang="en">Lockers available</span><span data-lang="es">Lockers disponibles</span></li>
+                  <li><span data-lang="en">Guided swimming</span><span data-lang="es">Nado guiado</span></li>
+                  <li><span data-lang="en">Certified guide</span><span data-lang="es">Guía certificada</span></li>
+                  <li><span data-lang="en">Lockers available</span><span data-lang="es">Casilleros disponibles</span></li>
                   <li><span data-lang="en">Rest areas</span><span data-lang="es">Áreas de descanso</span></li>
                 </ul>
                 <div class="mt-6 grid gap-3 sm:grid-cols-2">
-                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md border border-jungle-cenote/70 px-4 py-3 text-sm font-bold text-jungle-mist" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20Kin-Ha%20and%20Blanca%20Flor%20Cenotes.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20Kin-Ha%20and%20Blanca%20Flor%20Cenotes.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20Cenotes%20Kin-Ha%20y%20Blanca%20Flor.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precios%3F"><span data-lang="en">Ask About This Package</span><span data-lang="es">Preguntar por este paquete</span></a>
-                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md bg-jungle-gold px-4 py-3 text-sm font-bold text-jungle-black" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20Kin-Ha%20and%20Blanca%20Flor%20Cenotes.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20Kin-Ha%20and%20Blanca%20Flor%20Cenotes.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20Cenotes%20Kin-Ha%20y%20Blanca%20Flor.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precios%3F"><span data-lang="en">Reserve on WhatsApp</span><span data-lang="es">Reservar por WhatsApp</span></a>
+                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md border border-jungle-cenote/70 px-4 py-3 text-sm font-bold text-jungle-mist" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20Kin-Ha%20%26%20Blanca%20Flor%20Cenotes.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20Kin-Ha%20%26%20Blanca%20Flor%20Cenotes.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20reservar%20Cenotes%20Kin-Ha%20y%20Blanca%20Flor.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precio%20final%3F"><span data-lang="en">Confirm Availability</span><span data-lang="es">Confirmar disponibilidad</span></a>
+                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md bg-jungle-gold px-4 py-3 text-sm font-bold text-jungle-black" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20Kin-Ha%20%26%20Blanca%20Flor%20Cenotes.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20Kin-Ha%20%26%20Blanca%20Flor%20Cenotes.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20reservar%20Cenotes%20Kin-Ha%20y%20Blanca%20Flor.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precio%20final%3F"><span data-lang="en">Reserve on WhatsApp</span><span data-lang="es">Reservar por WhatsApp</span></a>
                 </div>
               </div>
             </article>
 
             <article class="package-card reveal overflow-hidden rounded-md border border-white/10 bg-jungle-deep/72 transition hover:-translate-y-1 hover:border-jungle-gold/50 hover:shadow-glow" data-reveal data-package-type="atv">
-              <img class="h-64 w-full object-cover" src="assets/kinha%20pareja%20en%20atv%20splash.jpg" alt="Kin-Ha ATV splash on jungle trail" loading="lazy">
+              <img class="h-72 w-full object-cover" src="assets/kinha%20pareja%20en%20atv%20splash.jpg" alt="Kin-Ha ATV splash on jungle trail" loading="lazy">
               <div class="p-5 sm:p-6">
-                <p class="text-xs font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">ATV + Zipline</span><span data-lang="es">ATV + Tirolesa</span></p>
+                <p class="text-xs font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Trail and water</span><span data-lang="es">Sendero y agua</span></p>
                 <h3 class="mt-2 font-display text-3xl text-jungle-mist"><span data-lang="en">ATV + Zipline Jungle Expedition</span><span data-lang="es">ATV + Tirolesa por la Selva</span></h3>
-                <p class="mt-3 text-sm leading-6 text-jungle-mist/72"><span data-lang="en">ATV jungle trail + zipline route + access to Cenote Kin-Ha and Blanca Flor.</span><span data-lang="es">ATV por la selva + tirolesas + acceso a Cenote Kin-Ha y Blanca Flor.</span></p>
-                <p class="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-jungle-mist/50"><span data-lang="en">Duration</span><span data-lang="es">Duración</span></p>
-                <p class="mt-1 text-sm text-jungle-mist/76"><span data-lang="en">Approximately 4 hours.</span><span data-lang="es">Aproximadamente 4 horas.</span></p>
-                <div class="mt-5 grid grid-cols-2 gap-3">
-                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="text-xs uppercase tracking-[0.16em] text-jungle-mist/50"><span data-lang="en">Adult</span><span data-lang="es">Adulto</span></p><p class="mt-1 font-bold text-jungle-gold">MXN $1,200 / USD $70</p></div>
-                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="text-xs uppercase tracking-[0.16em] text-jungle-mist/50"><span data-lang="en">Child</span><span data-lang="es">Menor</span></p><p class="mt-1 font-bold text-jungle-gold">MXN $700 / USD $40</p></div>
+                <p class="mt-3 text-sm leading-6 text-jungle-mist/72"><span data-lang="en">ATV trail, zipline platforms and cenote swimming in one compact Puerto Morelos route.</span><span data-lang="es">Ruta ATV, plataformas de tirolesa y nado en cenote en una experiencia compacta en Puerto Morelos.</span></p>
+                <p class="mt-4 text-sm font-semibold text-jungle-mist/74"><span data-lang="en">Approximately 4 hours.</span><span data-lang="es">Aproximadamente 4 horas.</span></p>
+                <div class="mt-5 grid gap-3 sm:grid-cols-2">
+                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="font-bold text-jungle-gold"><span data-lang="en">Adult:</span><span data-lang="es">Adulto:</span> MXN $1,200 / USD $70</p></div>
+                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="font-bold text-jungle-gold"><span data-lang="en">Child:</span><span data-lang="es">Menor:</span> MXN $700 / USD $40</p></div>
                 </div>
                 <p class="mt-3 text-xs text-jungle-mist/58"><span data-lang="en">Child pricing applies under 1.20m height.</span><span data-lang="es">Precio de menor aplica midiendo menos de 1.20m.</span></p>
                 <p class="mt-5 text-sm font-bold text-jungle-mist"><span data-lang="en">Includes</span><span data-lang="es">Incluye</span></p>
                 <ul class="mt-3 grid gap-2 text-sm text-jungle-mist/70 sm:grid-cols-2">
                   <li><span data-lang="en">Round-trip transportation</span><span data-lang="es">Transportación redonda</span></li>
-                  <li><span data-lang="en">Certified bilingual guide</span><span data-lang="es">Guía bilingüe certificado</span></li>
-                  <li><span data-lang="en">ATV route, approx. 30 minutes</span><span data-lang="es">Ruta ATV, aprox. 30 minutos</span></li>
-                  <li><span data-lang="en">Zipline route, approx. 30 minutes</span><span data-lang="es">Ruta de tirolesas, aprox. 30 minutos</span></li>
-                  <li><span data-lang="en">Cenote swimming, approx. 60 minutes</span><span data-lang="es">Nado en cenote, aprox. 60 minutos</span></li>
+                  <li><span data-lang="en">Certified bilingual guide</span><span data-lang="es">Guía bilingüe certificada</span></li>
+                  <li><span data-lang="en">ATV route</span><span data-lang="es">Ruta ATV</span></li>
+                  <li><span data-lang="en">Zipline route</span><span data-lang="es">Ruta de tirolesa</span></li>
+                  <li><span data-lang="en">Cenote swimming</span><span data-lang="es">Nado en cenote</span></li>
                   <li><span data-lang="en">Safety equipment</span><span data-lang="es">Equipo de seguridad</span></li>
-                  <li><span data-lang="en">Regional Mexican lunch / snacks</span><span data-lang="es">Lunch regional mexicano / snacks</span></li>
-                  <li><span data-lang="en">Lockers and rest areas</span><span data-lang="es">Lockers y áreas de descanso</span></li>
+                  <li><span data-lang="en">Regional Mexican food</span><span data-lang="es">Comida regional mexicana</span></li>
+                  <li><span data-lang="en">Lockers and rest areas</span><span data-lang="es">Casilleros y áreas de descanso</span></li>
                 </ul>
                 <p class="mt-5 text-sm font-bold text-jungle-mist"><span data-lang="en">Optional</span><span data-lang="es">Opcional</span></p>
-                <p class="mt-2 text-sm text-jungle-mist/68"><span data-lang="en">Horseback MXN $200 / USD $12 · Preservation contribution MXN $100 / USD $5</span><span data-lang="es">Caballos MXN $200 / USD $12 · Contribución para preservación MXN $100 / USD $5</span></p>
+                <p class="mt-2 text-sm text-jungle-mist/68"><span data-lang="en">Horseback add-on MXN $200 / USD $12 · Jungle preservation contribution MXN $100 / USD $5</span><span data-lang="es">Caballos MXN $200 / USD $12 · Contribución para preservación MXN $100 / USD $5</span></p>
                 <div class="mt-6 grid gap-3 sm:grid-cols-2">
-                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md border border-jungle-cenote/70 px-4 py-3 text-sm font-bold text-jungle-mist" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20ATV%20%2B%20Zipline%20Jungle%20Expedition.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20ATV%20%2B%20Zipline%20Jungle%20Expedition.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20ATV%20%2B%20Tirolesa%20por%20la%20Selva.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precios%3F"><span data-lang="en">Ask About This Package</span><span data-lang="es">Preguntar por este paquete</span></a>
-                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md bg-jungle-gold px-4 py-3 text-sm font-bold text-jungle-black" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20ATV%20%2B%20Zipline%20Jungle%20Expedition.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20ATV%20%2B%20Zipline%20Jungle%20Expedition.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20ATV%20%2B%20Tirolesa%20por%20la%20Selva.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precios%3F"><span data-lang="en">Reserve on WhatsApp</span><span data-lang="es">Reservar por WhatsApp</span></a>
+                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md border border-jungle-cenote/70 px-4 py-3 text-sm font-bold text-jungle-mist" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20ATV%20%2B%20Zipline%20Jungle%20Expedition.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20ATV%20%2B%20Zipline%20Jungle%20Expedition.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20reservar%20ATV%20%2B%20Tirolesa%20por%20la%20Selva.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precio%20final%3F"><span data-lang="en">Confirm Availability</span><span data-lang="es">Confirmar disponibilidad</span></a>
+                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md bg-jungle-gold px-4 py-3 text-sm font-bold text-jungle-black" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20ATV%20%2B%20Zipline%20Jungle%20Expedition.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20ATV%20%2B%20Zipline%20Jungle%20Expedition.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20reservar%20ATV%20%2B%20Tirolesa%20por%20la%20Selva.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precio%20final%3F"><span data-lang="en">Reserve on WhatsApp</span><span data-lang="es">Reservar por WhatsApp</span></a>
                 </div>
               </div>
             </article>
 
             <article class="package-card reveal overflow-hidden rounded-md border border-white/10 bg-jungle-deep/72 transition hover:-translate-y-1 hover:border-jungle-gold/50 hover:shadow-glow" data-reveal data-package-type="horseback">
-              <img class="h-64 w-full object-cover" src="assets/Horseback%20ride.JPG" alt="Horseback riding on shaded Kin-Ha trail" loading="lazy">
+              <img class="h-72 w-full object-cover" src="assets/Horseback%20ride.JPG" alt="Horseback riding on shaded Kin-Ha trail" loading="lazy">
               <div class="p-5 sm:p-6">
-                <p class="text-xs font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Horseback</span><span data-lang="es">Caballos</span></p>
-                <h3 class="mt-2 font-display text-3xl text-jungle-mist"><span data-lang="en">Horseback & Cenotes Experience</span><span data-lang="es">Caballos y Cenotes</span></h3>
-                <p class="mt-3 text-sm leading-6 text-jungle-mist/72"><span data-lang="en">Horseback riding through shaded jungle trails + access to cenotes.</span><span data-lang="es">Paseo a caballo por senderos de selva + acceso a cenotes.</span></p>
-                <p class="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-jungle-mist/50"><span data-lang="en">Duration</span><span data-lang="es">Duración</span></p>
-                <p class="mt-1 text-sm text-jungle-mist/76"><span data-lang="en">Timing depends on pickup zone.</span><span data-lang="es">Duración según zona de pickup.</span></p>
-                <div class="mt-5 grid grid-cols-2 gap-3">
-                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="text-xs uppercase tracking-[0.16em] text-jungle-mist/50"><span data-lang="en">Adult</span><span data-lang="es">Adulto</span></p><p class="mt-1 font-bold text-jungle-gold">MXN $1,200 / USD $70</p></div>
-                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="text-xs uppercase tracking-[0.16em] text-jungle-mist/50"><span data-lang="en">Child</span><span data-lang="es">Menor</span></p><p class="mt-1 font-bold text-jungle-gold">MXN $700 / USD $40</p></div>
+                <p class="text-xs font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Shaded jungle trails</span><span data-lang="es">Senderos de selva</span></p>
+                <h3 class="mt-2 font-display text-3xl text-jungle-mist"><span data-lang="en">Horseback & Cenotes</span><span data-lang="es">Caballos y Cenotes</span></h3>
+                <p class="mt-3 text-sm leading-6 text-jungle-mist/72"><span data-lang="en">Horseback riding through shaded trails with cenote access and regional hospitality.</span><span data-lang="es">Paseo a caballo por senderos sombreados con acceso a cenotes y hospitalidad regional.</span></p>
+                <div class="mt-5 grid gap-3 sm:grid-cols-2">
+                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="font-bold text-jungle-gold"><span data-lang="en">Adult:</span><span data-lang="es">Adulto:</span> MXN $1,200 / USD $70</p></div>
+                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="font-bold text-jungle-gold"><span data-lang="en">Child:</span><span data-lang="es">Menor:</span> MXN $700 / USD $40</p></div>
                 </div>
                 <p class="mt-3 text-xs text-jungle-mist/58"><span data-lang="en">Child pricing applies under 1.20m height.</span><span data-lang="es">Precio de menor aplica midiendo menos de 1.20m.</span></p>
                 <p class="mt-5 text-sm font-bold text-jungle-mist"><span data-lang="en">Includes</span><span data-lang="es">Incluye</span></p>
@@ -529,29 +527,27 @@
                   <li><span data-lang="en">Round-trip transportation</span><span data-lang="es">Transportación redonda</span></li>
                   <li><span data-lang="en">Horseback riding</span><span data-lang="es">Paseo a caballo</span></li>
                   <li><span data-lang="en">Cenote access</span><span data-lang="es">Acceso a cenotes</span></li>
-                  <li><span data-lang="en">Certified guide</span><span data-lang="es">Guía certificado</span></li>
-                  <li><span data-lang="en">Regional Mexican lunch</span><span data-lang="es">Lunch regional mexicano</span></li>
-                  <li><span data-lang="en">Lockers</span><span data-lang="es">Lockers</span></li>
+                  <li><span data-lang="en">Certified guide</span><span data-lang="es">Guía certificada</span></li>
+                  <li><span data-lang="en">Regional Mexican food</span><span data-lang="es">Comida regional mexicana</span></li>
+                  <li><span data-lang="en">Lockers</span><span data-lang="es">Casilleros</span></li>
                   <li><span data-lang="en">Rest areas</span><span data-lang="es">Áreas de descanso</span></li>
                 </ul>
                 <div class="mt-6 grid gap-3 sm:grid-cols-2">
-                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md border border-jungle-cenote/70 px-4 py-3 text-sm font-bold text-jungle-mist" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20Horseback%20and%20Cenotes%20Experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20Horseback%20and%20Cenotes%20Experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20Caballos%20y%20Cenotes.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precios%3F"><span data-lang="en">Ask About This Package</span><span data-lang="es">Preguntar por este paquete</span></a>
-                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md bg-jungle-gold px-4 py-3 text-sm font-bold text-jungle-black" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20Horseback%20and%20Cenotes%20Experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20Horseback%20and%20Cenotes%20Experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20Caballos%20y%20Cenotes.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precios%3F"><span data-lang="en">Reserve on WhatsApp</span><span data-lang="es">Reservar por WhatsApp</span></a>
+                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md border border-jungle-cenote/70 px-4 py-3 text-sm font-bold text-jungle-mist" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20Horseback%20%26%20Cenotes.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20Horseback%20%26%20Cenotes.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20reservar%20Caballos%20y%20Cenotes.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precio%20final%3F"><span data-lang="en">Confirm Availability</span><span data-lang="es">Confirmar disponibilidad</span></a>
+                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md bg-jungle-gold px-4 py-3 text-sm font-bold text-jungle-black" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20Horseback%20%26%20Cenotes.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20Horseback%20%26%20Cenotes.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20reservar%20Caballos%20y%20Cenotes.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precio%20final%3F"><span data-lang="en">Reserve on WhatsApp</span><span data-lang="es">Reservar por WhatsApp</span></a>
                 </div>
               </div>
             </article>
 
             <article class="package-card reveal overflow-hidden rounded-md border border-jungle-gold/40 bg-jungle-deep/72 transition hover:-translate-y-1 hover:border-jungle-gold hover:shadow-glow" data-reveal data-package-type="signature">
-              <img class="h-64 w-full object-cover" src="assets/kinha%20tirolesa%20sobfre%20el%20agua.jpg" alt="Kin-Ha zipline over cenote water" loading="lazy">
+              <img class="h-72 w-full object-cover" src="assets/kinha%20tirolesa%20sobfre%20el%20agua.jpg" alt="Kin-Ha zipline over cenote water" loading="lazy">
               <div class="p-5 sm:p-6">
                 <p class="text-xs font-bold uppercase tracking-[0.18em] text-jungle-gold"><span data-lang="en">Complete route</span><span data-lang="es">Ruta completa</span></p>
                 <h3 class="mt-2 font-display text-3xl text-jungle-mist"><span data-lang="en">Complete Kin-Ha Experience</span><span data-lang="es">Experiencia Completa Kin-Ha</span></h3>
-                <p class="mt-3 text-sm leading-6 text-jungle-mist/72"><span data-lang="en">The complete Kin-Ha route: Cenote Kin-Ha + Blanca Flor + ATV + regional lunch + transportation.</span><span data-lang="es">La ruta completa Kin-Ha: Cenote Kin-Ha + Blanca Flor + ATV + lunch regional + transportación.</span></p>
-                <p class="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-jungle-mist/50"><span data-lang="en">Duration</span><span data-lang="es">Duración</span></p>
-                <p class="mt-1 text-sm text-jungle-mist/76"><span data-lang="en">Complete Kin-Ha route timing varies by pickup.</span><span data-lang="es">La duración de la ruta completa depende del pickup.</span></p>
-                <div class="mt-5 grid grid-cols-2 gap-3">
-                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="text-xs uppercase tracking-[0.16em] text-jungle-mist/50"><span data-lang="en">Adult</span><span data-lang="es">Adulto</span></p><p class="mt-1 font-bold text-jungle-gold">MXN $1,400 / USD $85</p></div>
-                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="text-xs uppercase tracking-[0.16em] text-jungle-mist/50"><span data-lang="en">Child</span><span data-lang="es">Menor</span></p><p class="mt-1 font-bold text-jungle-gold">MXN $800 / USD $50</p></div>
+                <p class="mt-3 text-sm leading-6 text-jungle-mist/72"><span data-lang="en">Cenote Kin-Ha, Blanca Flor, ATV, regional food and transportation in one complete route.</span><span data-lang="es">Cenote Kin-Ha, Blanca Flor, ATV, comida regional y transportación en una ruta completa.</span></p>
+                <div class="mt-5 grid gap-3 sm:grid-cols-2">
+                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="font-bold text-jungle-gold"><span data-lang="en">Adult:</span><span data-lang="es">Adulto:</span> MXN $1,400 / USD $85</p></div>
+                  <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><p class="font-bold text-jungle-gold"><span data-lang="en">Child:</span><span data-lang="es">Menor:</span> MXN $800 / USD $50</p></div>
                 </div>
                 <p class="mt-3 text-xs text-jungle-mist/58"><span data-lang="en">Child pricing applies under 1.20m height.</span><span data-lang="es">Precio de menor aplica midiendo menos de 1.20m.</span></p>
                 <p class="mt-5 text-sm font-bold text-jungle-mist"><span data-lang="en">Includes</span><span data-lang="es">Incluye</span></p>
@@ -560,16 +556,16 @@
                   <li><span data-lang="en">Kin-Ha cenote</span><span data-lang="es">Cenote Kin-Ha</span></li>
                   <li><span data-lang="en">Blanca Flor cenote</span><span data-lang="es">Cenote Blanca Flor</span></li>
                   <li><span data-lang="en">ATV route</span><span data-lang="es">Ruta ATV</span></li>
-                  <li><span data-lang="en">Regional Mexican lunch</span><span data-lang="es">Lunch regional mexicano</span></li>
-                  <li><span data-lang="en">Certified guide</span><span data-lang="es">Guía certificado</span></li>
-                  <li><span data-lang="en">Lockers</span><span data-lang="es">Lockers</span></li>
+                  <li><span data-lang="en">Regional Mexican food</span><span data-lang="es">Comida regional mexicana</span></li>
+                  <li><span data-lang="en">Certified guide</span><span data-lang="es">Guía certificada</span></li>
+                  <li><span data-lang="en">Lockers</span><span data-lang="es">Casilleros</span></li>
                   <li><span data-lang="en">Rest areas</span><span data-lang="es">Áreas de descanso</span></li>
                 </ul>
                 <p class="mt-5 text-sm font-bold text-jungle-mist"><span data-lang="en">Optional</span><span data-lang="es">Opcional</span></p>
-                <p class="mt-2 text-sm text-jungle-mist/68"><span data-lang="en">Preservation contribution MXN $100 / USD $5</span><span data-lang="es">Contribución para preservación MXN $100 / USD $5</span></p>
+                <p class="mt-2 text-sm text-jungle-mist/68"><span data-lang="en">Jungle preservation contribution MXN $100 / USD $5</span><span data-lang="es">Contribución para preservación MXN $100 / USD $5</span></p>
                 <div class="mt-6 grid gap-3 sm:grid-cols-2">
-                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md border border-jungle-cenote/70 px-4 py-3 text-sm font-bold text-jungle-mist" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20Complete%20Kin-Ha%20Experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20Complete%20Kin-Ha%20Experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20la%20Experiencia%20Completa%20Kin-Ha.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precios%3F"><span data-lang="en">Ask About This Package</span><span data-lang="es">Preguntar por este paquete</span></a>
-                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md bg-jungle-gold px-4 py-3 text-sm font-bold text-jungle-black" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20Complete%20Kin-Ha%20Experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20the%20Complete%20Kin-Ha%20Experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20la%20Experiencia%20Completa%20Kin-Ha.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precios%3F"><span data-lang="en">Reserve on WhatsApp</span><span data-lang="es">Reservar por WhatsApp</span></a>
+                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md border border-jungle-cenote/70 px-4 py-3 text-sm font-bold text-jungle-mist" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20Complete%20Kin-Ha%20Experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20Complete%20Kin-Ha%20Experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20reservar%20Experiencia%20Completa%20Kin-Ha.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precio%20final%3F"><span data-lang="en">Confirm Availability</span><span data-lang="es">Confirmar disponibilidad</span></a>
+                  <a class="focus-ring inline-flex min-h-11 items-center justify-center rounded-md bg-jungle-gold px-4 py-3 text-sm font-bold text-jungle-black" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20Complete%20Kin-Ha%20Experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" data-wa-en="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20Complete%20Kin-Ha%20Experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" data-wa-es="https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20reservar%20Experiencia%20Completa%20Kin-Ha.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precio%20final%3F"><span data-lang="en">Reserve on WhatsApp</span><span data-lang="es">Reservar por WhatsApp</span></a>
                 </div>
               </div>
             </article>
@@ -577,10 +573,25 @@
         </div>
       </section>
 
+      <section class="bg-[#09140F] py-16 sm:py-24" aria-labelledby="why-title">
+        <div class="section-shell">
+          <div class="reveal max-w-3xl" data-reveal>
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">NATURAL DIFFERENTIATORS</span><span data-lang="es">DIFERENCIADORES NATURALES</span></p>
+            <h2 id="why-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl"><span data-lang="en">Why Kin-Ha feels different</span><span data-lang="es">Por qué Kin-Ha se siente diferente</span></h2>
+          </div>
+          <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <article class="reveal glass-panel rounded-md p-5" data-reveal><h3 class="text-xl font-bold text-jungle-mist"><span data-lang="en">Natural cenote setting</span><span data-lang="es">Entorno de cenotes naturales</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Kin-Ha and Blanca Flor offer freshwater access surrounded by jungle and limestone formations.</span><span data-lang="es">Kin-Ha y Blanca Flor ofrecen acceso a agua dulce rodeada de selva y formaciones de piedra caliza.</span></p></article>
+            <article class="reveal glass-panel rounded-md p-5" data-reveal><h3 class="text-xl font-bold text-jungle-mist"><span data-lang="en">Deep freshwater systems</span><span data-lang="es">Sistemas profundos de agua dulce</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Kin-Ha includes areas with approximate depths of 30, 40 and up to 70 meters. Diving-related activities are only for certified divers and require prior approval.</span><span data-lang="es">Kin-Ha cuenta con áreas de profundidad aproximada de 30, 40 y hasta 70 metros. Actividades de buceo solo para buzos certificados y con aprobación previa.</span></p></article>
+            <article class="reveal glass-panel rounded-md p-5" data-reveal><h3 class="text-xl font-bold text-jungle-mist"><span data-lang="en">Platforms and performance energy</span><span data-lang="es">Plataformas y energía escénica</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Blanca Flor is known as a place where experienced jumpers practice from different platforms, including approximate heights of up to 14 meters.</span><span data-lang="es">Blanca Flor es conocida como un espacio donde clavadistas experimentados practican desde distintas plataformas, incluyendo alturas aproximadas de hasta 14 metros.</span></p></article>
+            <article class="reveal glass-panel rounded-md p-5" data-reveal><h3 class="text-xl font-bold text-jungle-mist"><span data-lang="en">Authentic jungle access</span><span data-lang="es">Acceso auténtico a la selva</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">The route keeps a small-group feeling with real terrain, lockers, rest areas and regional hospitality.</span><span data-lang="es">La ruta mantiene sensación de grupo pequeño con terreno real, casilleros, áreas de descanso y hospitalidad regional.</span></p></article>
+          </div>
+        </div>
+      </section>
+
       <section id="pricing" class="bg-jungle-deep py-16 sm:py-24" aria-labelledby="pricing-title">
         <div class="section-shell">
           <div class="reveal max-w-3xl" data-reveal>
-            <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Pricing</span><span data-lang="es">Precios</span></p>
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Packages</span><span data-lang="es">Paquetes</span></p>
             <h2 id="pricing-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl"><span data-lang="en">Compare packages</span><span data-lang="es">Comparar paquetes</span></h2>
           </div>
           <div class="reveal mt-8 overflow-x-auto rounded-md border border-white/10 bg-jungle-black/45" data-reveal>
@@ -592,7 +603,7 @@
                   <th class="px-4 py-4">ATV</th>
                   <th class="px-4 py-4"><span data-lang="en">Zipline</span><span data-lang="es">Tirolesa</span></th>
                   <th class="px-4 py-4"><span data-lang="en">Horseback</span><span data-lang="es">Caballos</span></th>
-                  <th class="px-4 py-4">Lunch</th>
+                  <th class="px-4 py-4"><span data-lang="en">Regional lunch</span><span data-lang="es">Comida regional</span></th>
                   <th class="px-4 py-4"><span data-lang="en">Transportation</span><span data-lang="es">Transportación</span></th>
                   <th class="px-4 py-4"><span data-lang="en">Adult</span><span data-lang="es">Adulto</span></th>
                   <th class="px-4 py-4"><span data-lang="en">Child</span><span data-lang="es">Menor</span></th>
@@ -605,8 +616,8 @@
                   <td class="px-4 py-4"><span data-lang="en">No</span><span data-lang="es">No</span></td>
                   <td class="px-4 py-4"><span data-lang="en">No</span><span data-lang="es">No</span></td>
                   <td class="px-4 py-4"><span data-lang="en">No</span><span data-lang="es">No</span></td>
-                  <td class="px-4 py-4"><span data-lang="en">Ask</span><span data-lang="es">Preguntar</span></td>
-                  <td class="px-4 py-4"><span data-lang="en">Ask</span><span data-lang="es">Preguntar</span></td>
+                  <td class="px-4 py-4"><span data-lang="en">Confirm</span><span data-lang="es">Confirmar</span></td>
+                  <td class="px-4 py-4"><span data-lang="en">Confirm</span><span data-lang="es">Confirmar</span></td>
                   <td class="px-4 py-4">MXN $500 / USD $30</td>
                   <td class="px-4 py-4">MXN $300 / USD $20</td>
                 </tr>
@@ -622,7 +633,7 @@
                   <td class="px-4 py-4">MXN $700 / USD $40</td>
                 </tr>
                 <tr>
-                  <td class="px-4 py-4 font-bold text-jungle-mist"><span data-lang="en">Horseback & Cenotes Experience</span><span data-lang="es">Caballos y Cenotes</span></td>
+                  <td class="px-4 py-4 font-bold text-jungle-mist"><span data-lang="en">Horseback & Cenotes</span><span data-lang="es">Caballos y Cenotes</span></td>
                   <td class="px-4 py-4"><span data-lang="en">Yes</span><span data-lang="es">Sí</span></td>
                   <td class="px-4 py-4"><span data-lang="en">No</span><span data-lang="es">No</span></td>
                   <td class="px-4 py-4"><span data-lang="en">No</span><span data-lang="es">No</span></td>
@@ -636,7 +647,7 @@
                   <td class="px-4 py-4 font-bold text-jungle-mist"><span data-lang="en">Complete Kin-Ha Experience</span><span data-lang="es">Experiencia Completa Kin-Ha</span></td>
                   <td class="px-4 py-4"><span data-lang="en">Yes</span><span data-lang="es">Sí</span></td>
                   <td class="px-4 py-4"><span data-lang="en">Yes</span><span data-lang="es">Sí</span></td>
-                  <td class="px-4 py-4"><span data-lang="en">Ask</span><span data-lang="es">Preguntar</span></td>
+                  <td class="px-4 py-4"><span data-lang="en">Confirm</span><span data-lang="es">Confirmar</span></td>
                   <td class="px-4 py-4"><span data-lang="en">Optional</span><span data-lang="es">Opcional</span></td>
                   <td class="px-4 py-4"><span data-lang="en">Yes</span><span data-lang="es">Sí</span></td>
                   <td class="px-4 py-4"><span data-lang="en">Yes</span><span data-lang="es">Sí</span></td>
@@ -656,23 +667,53 @@
             <h2 id="flow-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl"><span data-lang="en">How the day works</span><span data-lang="es">Cómo funciona el día</span></h2>
           </div>
           <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <article class="reveal rounded-md border border-white/10 bg-jungle-deep/72 p-5" data-reveal><p class="text-sm font-bold text-jungle-gold">01</p><h3 class="mt-3 text-xl font-bold text-jungle-mist"><span data-lang="en">Hotel pickup</span><span data-lang="es">Pickup en hotel</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Pickup from your hotel in a comfortable A/C shuttle for small groups.</span><span data-lang="es">Pickup desde tu hotel en shuttle cómodo con A/C para grupos pequeños.</span></p></article>
+            <article class="reveal rounded-md border border-white/10 bg-jungle-deep/72 p-5" data-reveal><p class="text-sm font-bold text-jungle-gold">01</p><h3 class="mt-3 text-xl font-bold text-jungle-mist"><span data-lang="en">Hotel pickup</span><span data-lang="es">Pickup en hotel</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Pickup from your hotel in a comfortable A/C van for small groups.</span><span data-lang="es">Pickup desde tu hotel en vehículo cómodo con A/C para grupos pequeños.</span></p></article>
             <article class="reveal rounded-md border border-white/10 bg-jungle-deep/72 p-5" data-reveal><p class="text-sm font-bold text-jungle-gold">02</p><h3 class="mt-3 text-xl font-bold text-jungle-mist"><span data-lang="en">Arrival at Ruta de los Cenotes</span><span data-lang="es">Llegada a Ruta de los Cenotes</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Travel to Puerto Morelos' Ruta de los Cenotes, approximately 45-60 minutes depending on hotel location.</span><span data-lang="es">Traslado a la Ruta de los Cenotes de Puerto Morelos, aprox. 45-60 min según hotel.</span></p></article>
-            <article class="reveal rounded-md border border-white/10 bg-jungle-deep/72 p-5" data-reveal><p class="text-sm font-bold text-jungle-gold">03</p><h3 class="mt-3 text-xl font-bold text-jungle-mist"><span data-lang="en">Certified guide briefing</span><span data-lang="es">Briefing con guía certificado</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">A certified bilingual guide explains the route, facilities, safety precautions and equipment.</span><span data-lang="es">Guía bilingüe certificado explica la ruta, instalaciones, seguridad y equipo.</span></p></article>
-            <article class="reveal rounded-md border border-white/10 bg-jungle-deep/72 p-5" data-reveal><p class="text-sm font-bold text-jungle-gold">04</p><h3 class="mt-3 text-xl font-bold text-jungle-mist"><span data-lang="en">Adventure route</span><span data-lang="es">Ruta de aventura</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Choose ATV, zipline, horseback, cenotes or the Complete Kin-Ha Experience.</span><span data-lang="es">Elige ATV, tirolesas, caballos, cenotes o la Experiencia Completa Kin-Ha.</span></p></article>
-            <article class="reveal rounded-md border border-white/10 bg-jungle-deep/72 p-5" data-reveal><p class="text-sm font-bold text-jungle-gold">05</p><h3 class="mt-3 text-xl font-bold text-jungle-mist"><span data-lang="en">Cenote swim</span><span data-lang="es">Nado en cenote</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Swim, snorkel and cool off in natural freshwater cenotes surrounded by limestone formations and jungle atmosphere.</span><span data-lang="es">Nada, snorkelea y refréscate en cenotes naturales rodeados de formaciones de piedra caliza y atmósfera de selva.</span></p></article>
-            <article class="reveal rounded-md border border-white/10 bg-jungle-deep/72 p-5" data-reveal><p class="text-sm font-bold text-jungle-gold">06</p><h3 class="mt-3 text-xl font-bold text-jungle-mist"><span data-lang="en">Regional lunch and rest</span><span data-lang="es">Lunch regional y descanso</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Enjoy regional Mexican food, rest areas and lockers for belongings.</span><span data-lang="es">Disfruta lunch regional mexicano, áreas de descanso y lockers para pertenencias.</span></p></article>
+            <article class="reveal rounded-md border border-white/10 bg-jungle-deep/72 p-5" data-reveal><p class="text-sm font-bold text-jungle-gold">03</p><h3 class="mt-3 text-xl font-bold text-jungle-mist"><span data-lang="en">Certified guide briefing</span><span data-lang="es">Introducción con guía certificada</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">A certified bilingual guide explains the route, facilities, safety precautions and equipment.</span><span data-lang="es">Una guía bilingüe certificada explica la ruta, instalaciones, seguridad y equipo.</span></p></article>
+            <article class="reveal rounded-md border border-white/10 bg-jungle-deep/72 p-5" data-reveal><p class="text-sm font-bold text-jungle-gold">04</p><h3 class="mt-3 text-xl font-bold text-jungle-mist"><span data-lang="en">Adventure route</span><span data-lang="es">Ruta de aventura</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Choose ATV, zipline, horseback, cenotes or the Complete Kin-Ha Experience.</span><span data-lang="es">Elige ATV, tirolesa, caballos, cenotes o la Experiencia Completa Kin-Ha.</span></p></article>
+            <article class="reveal rounded-md border border-white/10 bg-jungle-deep/72 p-5" data-reveal><p class="text-sm font-bold text-jungle-gold">05</p><h3 class="mt-3 text-xl font-bold text-jungle-mist"><span data-lang="en">Cenote swim</span><span data-lang="es">Nado en cenote</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Swim and cool off in natural freshwater cenotes surrounded by limestone formations and jungle atmosphere.</span><span data-lang="es">Nada y refréscate en cenotes naturales rodeados de formaciones de piedra caliza y atmósfera de selva.</span></p></article>
+            <article class="reveal rounded-md border border-white/10 bg-jungle-deep/72 p-5" data-reveal><p class="text-sm font-bold text-jungle-gold">06</p><h3 class="mt-3 text-xl font-bold text-jungle-mist"><span data-lang="en">Regional food and rest</span><span data-lang="es">Comida regional y descanso</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Enjoy regional Mexican food, rest areas and lockers for belongings.</span><span data-lang="es">Disfruta comida regional mexicana, áreas de descanso y casilleros para pertenencias.</span></p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="location" class="bg-jungle-deep py-16 sm:py-24" aria-labelledby="location-title">
+        <div class="section-shell">
+          <div class="reveal grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start" data-reveal>
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">LOCATION & PICKUP</span><span data-lang="es">UBICACIÓN Y PICKUP</span></p>
+              <h2 id="location-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl">Ruta de los Cenotes, Puerto Morelos</h2>
+              <p class="mt-5 text-base leading-7 text-jungle-mist/74"><span data-lang="en">The experience operates along Puerto Morelos' Ruta de los Cenotes, with pickup available from Cancun, Playa del Carmen and Puerto Morelos.</span><span data-lang="es">La experiencia opera en la Ruta de los Cenotes de Puerto Morelos, con transportación disponible desde Cancún, Playa del Carmen y Puerto Morelos.</span></p>
+              <div class="mt-6 grid gap-3">
+                <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><span data-lang="en">Cancun - approx. 45-60 min depending on hotel</span><span data-lang="es">Cancún - aprox. 45-60 min según hotel</span></div>
+                <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><span data-lang="en">Playa del Carmen - approx. 45-60 min depending on hotel</span><span data-lang="es">Playa del Carmen - aprox. 45-60 min según hotel</span></div>
+                <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><span data-lang="en">Puerto Morelos - closest access to the route</span><span data-lang="es">Puerto Morelos - acceso más cercano a la ruta</span></div>
+              </div>
+              <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                <button class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md border border-jungle-cenote/70 px-5 py-3 text-sm font-bold text-jungle-mist" type="button" data-map-load><span data-lang="en">View Map</span><span data-lang="es">Ver mapa</span></button>
+                <a class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md bg-jungle-gold px-5 py-3 text-sm font-bold text-jungle-black" href="https://maps.app.goo.gl/xVPBeLaLGrCfeLYC9" target="_blank" rel="noopener noreferrer"><span data-lang="en">Open in Google Maps</span><span data-lang="es">Abrir en Google Maps</span></a>
+                <a class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md border border-jungle-cenote/70 px-5 py-3 text-sm font-bold text-jungle-mist" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" data-wa-general><span data-lang="en">Confirm Pickup on WhatsApp</span><span data-lang="es">Confirmar pickup por WhatsApp</span></a>
+              </div>
+            </div>
+            <div class="map-card min-h-[340px] overflow-hidden rounded-md border border-jungle-cenote/30 bg-jungle-black shadow-glow">
+              <div class="relative min-h-[340px]" data-map-target>
+                <img class="absolute inset-0 h-full w-full object-cover opacity-70" src="assets/family%20fun.JPG" alt="Family moment at Kin-Ha jungle route" loading="lazy">
+                <div class="absolute inset-0 bg-jungle-black/42"></div>
+                <div class="relative z-10 flex min-h-[340px] flex-col items-start justify-end p-6">
+                  <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Map loads on request</span><span data-lang="es">El mapa carga al solicitarlo</span></p>
+                  <p class="mt-3 max-w-md text-sm leading-6 text-jungle-mist/72"><span data-lang="en">A lightweight map card keeps the page fast until you choose to view the embedded map.</span><span data-lang="es">La tarjeta de mapa mantiene la página rápida hasta que eliges ver el mapa integrado.</span></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="bg-[#09140F] py-14" aria-labelledby="gallery-title">
         <div class="section-shell">
-          <div class="reveal flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between" data-reveal>
-            <div>
-              <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Real Kin-Ha moments</span><span data-lang="es">Momentos reales Kin-Ha</span></p>
-              <h2 id="gallery-title" class="mt-3 font-display text-4xl text-jungle-mist"><span data-lang="en">Cenote light, jungle trails, water crossings.</span><span data-lang="es">Luz de cenote, senderos de selva, cruces de agua.</span></h2>
-            </div>
+          <div class="reveal" data-reveal>
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Real Kin-Ha moments</span><span data-lang="es">Momentos reales Kin-Ha</span></p>
+            <h2 id="gallery-title" class="mt-3 font-display text-4xl text-jungle-mist"><span data-lang="en">Cenote light, jungle trails, water crossings.</span><span data-lang="es">Luz de cenote, senderos de selva, cruces de agua.</span></h2>
           </div>
           <div class="reveal no-scrollbar mt-8 flex gap-4 overflow-x-auto" data-reveal>
             <img class="h-72 w-[78vw] max-w-md shrink-0 rounded-md object-cover shadow-soft md:w-[31rem]" src="assets/Cenote%20Kinha.JPG" alt="Cenote Kin-Ha water and limestone" loading="lazy">
@@ -684,36 +725,13 @@
         </div>
       </section>
 
-      <section id="location" class="bg-jungle-deep py-16 sm:py-24" aria-labelledby="location-title">
-        <div class="section-shell">
-          <div class="reveal grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start" data-reveal>
-            <div>
-              <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Location</span><span data-lang="es">Ubicación</span></p>
-              <h2 id="location-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl"><span data-lang="en">Location & Pickup Zones</span><span data-lang="es">Ubicación y zonas de pickup</span></h2>
-              <p class="mt-5 text-base leading-7 text-jungle-mist/74"><span data-lang="en">The experience operates along Puerto Morelos' Ruta de los Cenotes, with pickup available from Cancun, Playa del Carmen and Puerto Morelos.</span><span data-lang="es">La experiencia opera en la Ruta de los Cenotes de Puerto Morelos, con transportación disponible desde Cancún, Playa del Carmen y Puerto Morelos.</span></p>
-              <div class="mt-6 grid gap-3">
-                <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><span data-lang="en">Cancun — approx. 45-60 min depending on hotel</span><span data-lang="es">Cancún — aprox. 45-60 min según hotel</span></div>
-                <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><span data-lang="en">Playa del Carmen — approx. 45-60 min depending on hotel</span><span data-lang="es">Playa del Carmen — aprox. 45-60 min según hotel</span></div>
-                <div class="rounded-md border border-white/10 bg-jungle-black/42 p-4"><span data-lang="en">Puerto Morelos — closest access to the route</span><span data-lang="es">Puerto Morelos — acceso más cercano a la ruta</span></div>
-              </div>
-              <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md bg-jungle-gold px-5 py-3 text-sm font-bold text-jungle-black" href="https://maps.app.goo.gl/xVPBeLaLGrCfeLYC9" target="_blank" rel="noopener noreferrer"><span data-lang="en">Open in Google Maps</span><span data-lang="es">Abrir en Google Maps</span></a>
-                <a class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md border border-jungle-cenote/70 px-5 py-3 text-sm font-bold text-jungle-mist" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" data-wa-general><span data-lang="en">Confirm Pickup on WhatsApp</span><span data-lang="es">Confirmar pickup por WhatsApp</span></a>
-              </div>
-            </div>
-            <div class="map-card min-h-[340px] overflow-hidden rounded-md border border-jungle-cenote/30 bg-jungle-black shadow-glow">
-              <div class="relative min-h-[340px]" data-map-target>
-                <img class="absolute inset-0 h-full w-full object-cover opacity-70" src="assets/family%20fun.JPG" alt="Kin-Ha family route moment" loading="lazy">
-                <div class="absolute inset-0 bg-jungle-black/42"></div>
-                <div class="relative z-10 flex min-h-[340px] flex-col items-start justify-end p-6">
-                  <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Lightweight map card</span><span data-lang="es">Mapa ligero</span></p>
-                  <button class="focus-ring mt-4 rounded-md bg-jungle-gold px-5 py-3 text-sm font-bold text-jungle-black" type="button" data-map-load>
-                    <span data-lang="en">View Map</span>
-                    <span data-lang="es">Ver mapa</span>
-                  </button>
-                </div>
-              </div>
-            </div>
+      <section class="bg-jungle-deep py-16 sm:py-24" aria-labelledby="contribution-title">
+        <div class="section-shell grid gap-8 lg:grid-cols-[0.75fr_1fr] lg:items-center">
+          <img class="reveal h-[380px] w-full rounded-md object-cover shadow-soft" data-reveal src="assets/Kinha%20Familia%20en%20las%20letras.jpg" alt="Kin-Ha family heritage moment" loading="lazy">
+          <div class="reveal" data-reveal>
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Optional contribution</span><span data-lang="es">Aportación opcional</span></p>
+            <h2 id="contribution-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl"><span data-lang="en">Jungle Preservation Contribution</span><span data-lang="es">Contribución para Preservación de la Selva</span></h2>
+            <p class="mt-5 text-base leading-7 text-jungle-mist/74"><span data-lang="en">Optional MXN $100 / USD $5 contribution that supports trail maintenance, cenote care and internal preservation initiatives. Guests receive a Kin-Ha Participation Certificate.</span><span data-lang="es">Aportación opcional de MXN $100 / USD $5 que apoya el mantenimiento de senderos, el cuidado de cenotes y acciones internas de preservación. Los visitantes reciben un Certificado de Participación Kin-Ha.</span></p>
           </div>
         </div>
       </section>
@@ -724,12 +742,12 @@
             <h2 id="included-title" class="font-display text-3xl text-jungle-mist"><span data-lang="en">What is included</span><span data-lang="es">Qué está incluido</span></h2>
             <ul class="mt-5 grid gap-3 text-sm text-jungle-mist/72">
               <li><span data-lang="en">Round-trip transportation</span><span data-lang="es">Transportación redonda</span></li>
-              <li><span data-lang="en">Certified bilingual guide</span><span data-lang="es">Guía bilingüe certificado</span></li>
+              <li><span data-lang="en">Certified bilingual guide</span><span data-lang="es">Guía bilingüe certificada</span></li>
               <li><span data-lang="en">Cenote access</span><span data-lang="es">Acceso a cenotes</span></li>
               <li><span data-lang="en">Safety equipment</span><span data-lang="es">Equipo de seguridad</span></li>
-              <li><span data-lang="en">Lockers available</span><span data-lang="es">Lockers disponibles</span></li>
+              <li><span data-lang="en">Lockers available</span><span data-lang="es">Casilleros disponibles</span></li>
               <li><span data-lang="en">Rest areas</span><span data-lang="es">Áreas de descanso</span></li>
-              <li><span data-lang="en">Regional lunch depending on package</span><span data-lang="es">Lunch regional según paquete</span></li>
+              <li><span data-lang="en">Regional food depending on package</span><span data-lang="es">Comida regional según paquete</span></li>
               <li><span data-lang="en">Small-group route planning</span><span data-lang="es">Ruta en grupos pequeños</span></li>
             </ul>
           </article>
@@ -739,9 +757,9 @@
               <li><span data-lang="en">Photos and videos</span><span data-lang="es">Fotos y videos</span></li>
               <li><span data-lang="en">Gratuities</span><span data-lang="es">Propinas</span></li>
               <li><span data-lang="en">Extra drinks</span><span data-lang="es">Bebidas extra</span></li>
-              <li><span data-lang="en">Souvenirs</span><span data-lang="es">Souvenirs</span></li>
+              <li><span data-lang="en">Souvenirs</span><span data-lang="es">Recuerdos</span></li>
               <li><span data-lang="en">Optional preservation contribution</span><span data-lang="es">Contribución opcional de preservación</span></li>
-              <li><span data-lang="en">Optional add-ons when not included</span><span data-lang="es">Add-ons opcionales cuando no estén incluidos</span></li>
+              <li><span data-lang="en">Optional add-ons when not included</span><span data-lang="es">Extras opcionales cuando no estén incluidos</span></li>
             </ul>
           </article>
           <article class="reveal glass-panel rounded-md p-6" data-reveal>
@@ -753,47 +771,21 @@
               <li><span data-lang="en">Suitable shoes</span><span data-lang="es">Zapatos adecuados</span></li>
               <li><span data-lang="en">Biodegradable sunscreen</span><span data-lang="es">Bloqueador biodegradable</span></li>
               <li><span data-lang="en">Bug spray</span><span data-lang="es">Repelente</span></li>
-              <li><span data-lang="en">Extra cash for photos, drinks, souvenirs and optional add-ons</span><span data-lang="es">Dinero extra para fotos, bebidas, souvenirs y add-ons opcionales</span></li>
+              <li><span data-lang="en">Extra cash for photos, drinks, souvenirs and optional add-ons</span><span data-lang="es">Dinero extra para fotos, bebidas, recuerdos y extras opcionales</span></li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section class="bg-jungle-deep py-16 sm:py-24" aria-labelledby="contribution-title">
-        <div class="section-shell grid gap-8 lg:grid-cols-[0.75fr_1fr] lg:items-center">
-          <img class="reveal h-[380px] w-full rounded-md object-cover shadow-soft" data-reveal src="assets/Kinha%20Familia%20en%20las%20letras.jpg" alt="Kin-Ha family heritage moment" loading="lazy">
-          <div class="reveal" data-reveal>
-            <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Optional add-on</span><span data-lang="es">Add-on opcional</span></p>
-            <h2 id="contribution-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl"><span data-lang="en">Jungle Preservation Contribution</span><span data-lang="es">Contribución para Preservación de la Selva</span></h2>
-            <p class="mt-5 text-base leading-7 text-jungle-mist/74"><span data-lang="en">An optional MXN $100 / USD $5 contribution that supports jungle trail maintenance, cenote care and internal preservation initiatives. Guests receive a Kin-Ha Participation Certificate.</span><span data-lang="es">Una aportación opcional de MXN $100 / USD $5 que apoya el mantenimiento de senderos, el cuidado de cenotes y acciones internas de preservación. Los visitantes reciben un Certificado de Participación Kin-Ha.</span></p>
-          </div>
-        </div>
-      </section>
-
-      <section id="story" class="bg-jungle-black py-16 sm:py-24" aria-labelledby="story-title">
+      <section id="story" class="bg-jungle-deep py-16 sm:py-24" aria-labelledby="story-title">
         <div class="section-shell grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-center">
           <div class="reveal" data-reveal>
             <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-gold"><span data-lang="en">The Kin-Ha Story</span><span data-lang="es">La historia Kin-Ha</span></p>
-            <h2 id="story-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl"><span data-lang="en">Family-connected land on the Ruta de los Cenotes.</span><span data-lang="es">Tierra conectada a una familia en la Ruta de los Cenotes.</span></h2>
-            <p class="mt-5 text-base leading-7 text-jungle-mist/74"><span data-lang="en">Kin-Ha is rooted in land connected to Francisco's family for generations. For more than 15 years, the area has welcomed travelers into a natural cenote environment along Puerto Morelos' Ruta de los Cenotes.</span><span data-lang="es">Kin-Ha nace en tierra conectada a la familia de Francisco por generaciones. Por más de 15 años, el área ha recibido viajeros en un entorno natural de cenotes sobre la Ruta de los Cenotes de Puerto Morelos.</span></p>
-            <p class="mt-4 text-base leading-7 text-jungle-mist/74"><span data-lang="en">Expect real Ruta de los Cenotes atmosphere, natural cenote access, shaded jungle trails and a small-group feel.</span><span data-lang="es">Espera atmósfera real de la Ruta de los Cenotes, acceso a cenotes naturales, senderos sombreados y sensación de grupo pequeño.</span></p>
+            <h2 id="story-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl"><span data-lang="en">Part of the Ruta de los Cenotes story for more than 15 years.</span><span data-lang="es">Parte de la historia de la Ruta de los Cenotes por más de 15 años.</span></h2>
+            <p class="mt-5 text-base leading-7 text-jungle-mist/74"><span data-lang="en">Kin-Ha has been part of the Ruta de los Cenotes story for more than 15 years, welcoming travelers into a natural cenote environment connected to local family heritage.</span><span data-lang="es">Kin-Ha ha sido parte de la historia de la Ruta de los Cenotes por más de 15 años, recibiendo viajeros en un entorno natural de cenotes conectado a herencia familiar local.</span></p>
+            <p class="mt-4 text-base leading-7 text-jungle-mist/74"><span data-lang="en">Expect natural cenote access, shaded jungle trails and a small-group feel.</span><span data-lang="es">Espera acceso a cenotes naturales, senderos de selva con sombra y sensación de grupo pequeño.</span></p>
           </div>
           <img class="reveal h-[420px] w-full rounded-md object-cover shadow-soft" data-reveal src="assets/Kinha%20Familia%20en%20las%20letras.jpg" alt="Kin-Ha entrance family moment" loading="lazy">
-        </div>
-      </section>
-
-      <section class="bg-[#09140F] py-16 sm:py-24" aria-labelledby="why-title">
-        <div class="section-shell">
-          <div class="reveal max-w-3xl" data-reveal>
-            <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Natural differentiators</span><span data-lang="es">Diferenciadores naturales</span></p>
-            <h2 id="why-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl"><span data-lang="en">Why Kin-Ha feels different</span><span data-lang="es">Por qué Kin-Ha se siente diferente</span></h2>
-          </div>
-          <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <article class="reveal glass-panel rounded-md p-5" data-reveal><h3 class="text-xl font-bold text-jungle-mist"><span data-lang="en">Natural cenote environment</span><span data-lang="es">Entorno de cenotes naturales</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Kin-Ha and Blanca Flor offer freshwater access surrounded by jungle and limestone formations.</span><span data-lang="es">Kin-Ha y Blanca Flor ofrecen acceso a agua dulce rodeada de selva y formaciones de piedra caliza.</span></p></article>
-            <article class="reveal glass-panel rounded-md p-5" data-reveal><h3 class="text-xl font-bold text-jungle-mist"><span data-lang="en">Deep freshwater systems</span><span data-lang="es">Sistemas profundos de agua dulce</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Kin-Ha is known for depth variations, with areas reaching approximately 30, 40 and up to 70 meters. Diving-related experiences are only for certified divers and require approval.</span><span data-lang="es">Kin-Ha es conocido por variaciones de profundidad, con áreas de aproximadamente 30, 40 y hasta 70 metros. Actividades de buceo solo para buzos certificados y con aprobación.</span></p></article>
-            <article class="reveal glass-panel rounded-md p-5" data-reveal><h3 class="text-xl font-bold text-jungle-mist"><span data-lang="en">Platforms and performance energy</span><span data-lang="es">Plataformas y energía de performance</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Blanca Flor is known as a place where experienced cliff jumpers and professionals practice from different platforms, including high platforms up to approximately 14 meters.</span><span data-lang="es">Blanca Flor es conocida como un lugar donde saltadores experimentados y profesionales practican desde distintas plataformas, incluyendo plataformas altas de hasta aproximadamente 14 metros.</span></p></article>
-            <article class="reveal glass-panel rounded-md p-5" data-reveal><h3 class="text-xl font-bold text-jungle-mist"><span data-lang="en">Authentic jungle access</span><span data-lang="es">Acceso auténtico a la selva</span></h3><p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">The route keeps a small-group feel with real terrain, rest areas, lockers and regional hospitality.</span><span data-lang="es">La ruta mantiene sensación de grupo pequeño con terreno real, áreas de descanso, lockers y hospitalidad regional.</span></p></article>
-          </div>
         </div>
       </section>
 
@@ -803,8 +795,7 @@
           <div class="reveal" data-reveal>
             <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-gold"><span data-lang="en">Special access</span><span data-lang="es">Acceso especial</span></p>
             <h2 id="fatima-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl"><span data-lang="en">Fátima: Limited Private Access</span><span data-lang="es">Fátima: Acceso privado limitado</span></h2>
-            <p class="mt-5 text-base leading-7 text-jungle-mist/74"><span data-lang="en">Fátima is a special cenote area not currently part of regular public tours. Access may be considered only for private groups, corporate groups or strategic partners, subject to approval and conservation guidelines.</span><span data-lang="es">Fátima es un área especial de cenote que actualmente no forma parte de tours públicos regulares. El acceso puede considerarse solo para grupos privados, grupos corporativos o socios estratégicos, sujeto a aprobación y lineamientos de conservación.</span></p>
-            <p class="mt-4 text-sm leading-6 text-jungle-mist/64"><span data-lang="en">It is known locally for a unique natural microorganism phenomenon, without guarantees or scientific claims on this page.</span><span data-lang="es">Es conocido localmente por un fenómeno natural único de microorganismos, sin garantías ni afirmaciones científicas en esta página.</span></p>
+            <p class="mt-5 text-base leading-7 text-jungle-mist/74"><span data-lang="en">Fátima is a special cenote area not currently part of regular public tours. Access may be considered only for private groups, corporate groups or strategic partners, subject to approval and conservation guidelines.</span><span data-lang="es">Fátima es un área especial de cenote que actualmente no forma parte de recorridos públicos regulares. El acceso puede considerarse solo para grupos privados, grupos corporativos o socios estratégicos, sujeto a aprobación y lineamientos de conservación.</span></p>
           </div>
         </div>
       </section>
@@ -834,16 +825,16 @@
             <h2 id="faq-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl"><span data-lang="en">Questions before booking</span><span data-lang="es">Preguntas antes de reservar</span></h2>
           </div>
           <div class="mt-10 grid gap-4 lg:grid-cols-2">
-            <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5" open><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">How long is the tour?</span><span data-lang="es">¿Cuánto dura el tour?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Timing depends on the selected route. The ATV + Zipline Jungle Expedition is approximately 4 hours, before hotel transfer time.</span><span data-lang="es">La duración depende de la ruta seleccionada. ATV + Tirolesa por la Selva dura aproximadamente 4 horas, sin contar el traslado desde hotel.</span></p></details>
+            <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5" open><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">How long is the tour?</span><span data-lang="es">¿Cuánto dura el recorrido?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Timing depends on the selected route. The ATV + Zipline Jungle Expedition is approximately 4 hours, before hotel transfer time.</span><span data-lang="es">La duración depende de la ruta seleccionada. ATV + Tirolesa por la Selva dura aproximadamente 4 horas, sin contar el traslado desde hotel.</span></p></details>
             <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5"><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">Is transportation included?</span><span data-lang="es">¿La transportación está incluida?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Transportation is included with selected packages from Cancun, Playa del Carmen and Puerto Morelos pickup zones.</span><span data-lang="es">La transportación está incluida en paquetes seleccionados desde zonas de pickup en Cancún, Playa del Carmen y Puerto Morelos.</span></p></details>
             <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5"><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">What should I bring?</span><span data-lang="es">¿Qué debo llevar?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Bring swimsuit, towel, comfortable clothes, suitable shoes, biodegradable sunscreen, bug spray and extra cash.</span><span data-lang="es">Trae traje de baño, toalla, ropa cómoda, zapatos adecuados, bloqueador biodegradable, repelente y dinero extra.</span></p></details>
-            <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5"><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">Are lockers available?</span><span data-lang="es">¿Hay lockers disponibles?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Lockers are available for belongings during the route.</span><span data-lang="es">Hay lockers disponibles para pertenencias durante la ruta.</span></p></details>
+            <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5"><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">Are lockers available?</span><span data-lang="es">¿Hay casilleros disponibles?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Lockers are available for belongings during the route.</span><span data-lang="es">Hay casilleros disponibles para pertenencias durante la ruta.</span></p></details>
             <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5"><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">Can children join?</span><span data-lang="es">¿Pueden ir niños?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Children can join selected experiences. Minors under 12 must be accompanied by an adult.</span><span data-lang="es">Los niños pueden participar en experiencias seleccionadas. Menores de 12 años deben ir acompañados por un adulto.</span></p></details>
             <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5"><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">What is child pricing?</span><span data-lang="es">¿Qué aplica para precio de menor?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Child pricing applies under 1.20m height.</span><span data-lang="es">Precio de menor aplica midiendo menos de 1.20m.</span></p></details>
-            <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5"><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">Is lunch included?</span><span data-lang="es">¿El lunch está incluido?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Regional Mexican lunch or snacks are included depending on the selected package.</span><span data-lang="es">Lunch regional mexicano o snacks están incluidos según el paquete seleccionado.</span></p></details>
+            <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5"><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">Is regional food included?</span><span data-lang="es">¿La comida regional está incluida?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Regional Mexican food or snacks are included depending on the selected package.</span><span data-lang="es">Comida regional mexicana o bocadillos están incluidos según el paquete seleccionado.</span></p></details>
             <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5"><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">Are photos included?</span><span data-lang="es">¿Las fotos están incluidas?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Photos and videos are not included.</span><span data-lang="es">Fotos y videos no están incluidos.</span></p></details>
             <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5"><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">Is diving available?</span><span data-lang="es">¿Hay buceo disponible?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Diving-related experiences are only for certified divers and require prior approval.</span><span data-lang="es">Las experiencias relacionadas con buceo son solo para buzos certificados y requieren aprobación previa.</span></p></details>
-            <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5"><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">Can private groups book?</span><span data-lang="es">¿Pueden reservar grupos privados?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Private groups, corporate groups and strategic partners can ask about special access subject to approval and conservation guidelines.</span><span data-lang="es">Grupos privados, corporativos y socios estratégicos pueden preguntar por acceso especial sujeto a aprobación y lineamientos de conservación.</span></p></details>
+            <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5"><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">Can private groups book?</span><span data-lang="es">¿Pueden reservar grupos privados?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Private groups, corporate groups and strategic partners can ask about special access subject to approval and conservation guidelines.</span><span data-lang="es">Grupos privados, corporativos y socios estratégicos pueden solicitar acceso especial sujeto a aprobación y lineamientos de conservación.</span></p></details>
             <details class="rounded-md border border-white/10 bg-jungle-deep/70 p-5 lg:col-span-2"><summary class="cursor-pointer text-lg font-bold text-jungle-mist marker:text-jungle-gold"><span data-lang="en">What happens if it rains?</span><span data-lang="es">¿Qué pasa si llueve?</span></summary><p class="mt-3 text-sm leading-6 text-jungle-mist/70"><span data-lang="en">Light rain may be part of the jungle atmosphere. If safety is affected, the team will confirm available options.</span><span data-lang="es">La lluvia ligera puede formar parte de la atmósfera de selva. Si la seguridad se ve afectada, el equipo confirmará las opciones disponibles.</span></p></details>
           </div>
         </div>
@@ -853,17 +844,17 @@
         <div class="section-shell grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div class="reveal" data-reveal>
             <p class="text-sm font-bold uppercase tracking-[0.18em] text-jungle-cenote"><span data-lang="en">Booking flow</span><span data-lang="es">Flujo de reserva</span></p>
-            <h2 id="booking-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl"><span data-lang="en">Reserve by WhatsApp now. Add checkout later.</span><span data-lang="es">Reserva por WhatsApp ahora. Checkout después.</span></h2>
-            <p class="mt-5 text-base leading-7 text-jungle-mist/74"><span data-lang="en">For now, WhatsApp is the fastest way to confirm package, pickup zone, travel date and current availability.</span><span data-lang="es">Por ahora, WhatsApp es la forma más rápida de confirmar paquete, zona de pickup, fecha de viaje y disponibilidad actual.</span></p>
+            <h2 id="booking-title" class="mt-3 font-display text-4xl text-jungle-mist sm:text-5xl"><span data-lang="en">Reserve on WhatsApp and confirm the exact day.</span><span data-lang="es">Reserva por WhatsApp y confirma el día exacto.</span></h2>
+            <p class="mt-5 text-base leading-7 text-jungle-mist/74"><span data-lang="en">WhatsApp is the fastest way to confirm package, pickup zone, travel date and current availability.</span><span data-lang="es">WhatsApp es la forma más rápida de confirmar paquete, zona de pickup, fecha de viaje y disponibilidad actual.</span></p>
             <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md bg-jungle-gold px-6 py-3 text-base font-bold text-jungle-black shadow-glow" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" data-wa-general><span data-lang="en">Reserve on WhatsApp</span><span data-lang="es">Reservar por WhatsApp</span></a>
+              <a class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md bg-jungle-gold px-6 py-3 text-base font-bold text-jungle-black shadow-glow" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" data-wa-general><span data-lang="en">Reserve on WhatsApp</span><span data-lang="es">Reservar por WhatsApp</span></a>
               <a class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md border border-jungle-cenote/70 px-6 py-3 text-base font-bold text-jungle-mist" href="#experiences"><span data-lang="en">View Packages</span><span data-lang="es">Ver paquetes</span></a>
             </div>
           </div>
-          <form class="reveal glass-panel rounded-md p-5" data-reveal aria-label="Future GHL lead form placeholder">
-            <p class="text-xs font-bold uppercase tracking-[0.18em] text-jungle-gold"><span data-lang="en">GHL form placeholder</span><span data-lang="es">Placeholder de formulario GHL</span></p>
+          <form class="reveal glass-panel rounded-md p-5" data-reveal aria-label="Future CRM lead form placeholder">
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-jungle-gold"><span data-lang="en">Future form placeholder</span><span data-lang="es">Espacio para formulario futuro</span></p>
             <h3 class="mt-3 font-display text-3xl text-jungle-mist"><span data-lang="en">Lead form structure</span><span data-lang="es">Estructura de formulario</span></h3>
-            <p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Stripe checkout placeholder and package interest fields are reserved for the future booking flow.</span><span data-lang="es">El placeholder de checkout Stripe y campos de interés de paquete quedan listos para el flujo futuro de reserva.</span></p>
+            <p class="mt-3 text-sm leading-6 text-jungle-mist/68"><span data-lang="en">Package interest fields are reserved for the future booking flow.</span><span data-lang="es">Los campos de interés de paquete quedan listos para el flujo futuro de reserva.</span></p>
             <div class="mt-5 grid gap-3 sm:grid-cols-2">
               <input class="rounded-md border border-white/10 bg-jungle-black/50 px-4 py-3 text-sm text-jungle-mist" data-placeholder-en="Name" data-placeholder-es="Nombre" placeholder="Name" disabled>
               <input class="rounded-md border border-white/10 bg-jungle-black/50 px-4 py-3 text-sm text-jungle-mist" data-placeholder-en="WhatsApp" data-placeholder-es="WhatsApp" placeholder="WhatsApp" disabled>
@@ -883,28 +874,28 @@
       <div class="section-shell flex flex-col gap-4 text-sm text-jungle-mist/60 sm:flex-row sm:items-center sm:justify-between">
         <p><span data-lang="en">&copy; 2026 Mexico Jungle Tours. All rights reserved.</span><span data-lang="es">&copy; 2026 Mexico Jungle Tours. Todos los derechos reservados.</span></p>
         <div class="flex flex-wrap gap-4">
-          <a class="focus-ring hover:text-jungle-gold" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" data-wa-general>WhatsApp</a>
+          <a class="focus-ring hover:text-jungle-gold" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" data-wa-general>WhatsApp</a>
           <a class="focus-ring hover:text-jungle-gold" href="#experiences"><span data-lang="en">Packages</span><span data-lang="es">Paquetes</span></a>
           <a class="focus-ring hover:text-jungle-gold" href="https://mexicojungletours.com/sitemap.xml"><span data-lang="en">Sitemap</span><span data-lang="es">Mapa del sitio</span></a>
         </div>
       </div>
     </footer>
 
-    <a id="floating-whatsapp" class="focus-ring fixed bottom-24 right-4 z-[60] hidden h-14 w-14 items-center justify-center rounded-full border border-jungle-cenote/70 bg-jungle-deep text-sm font-black text-jungle-mist shadow-glow transition hover:bg-jungle-cenote/20 md:flex" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp" data-wa-general data-aria-en="Open WhatsApp" data-aria-es="Abrir WhatsApp">
+    <a id="floating-whatsapp" class="focus-ring fixed bottom-24 right-4 z-[60] hidden h-14 w-14 items-center justify-center rounded-full border border-jungle-cenote/70 bg-jungle-deep text-sm font-black text-jungle-mist shadow-glow transition hover:bg-jungle-cenote/20 md:flex" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp" data-wa-general data-aria-en="Open WhatsApp" data-aria-es="Abrir WhatsApp">
       WA
     </a>
 
     <div id="sticky-booking-bar" class="fixed inset-x-0 bottom-0 z-[60] border-t border-white/10 bg-jungle-black/94 p-3 backdrop-blur md:hidden" aria-label="Mobile booking actions">
       <div class="grid grid-cols-3 gap-2">
-        <a class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md border border-jungle-cenote/70 px-3 py-3 text-sm font-bold text-jungle-mist" href="https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F" target="_blank" rel="noopener noreferrer" data-wa-general>WhatsApp</a>
+        <a class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md border border-jungle-cenote/70 px-3 py-3 text-sm font-bold text-jungle-mist" href="https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F" target="_blank" rel="noopener noreferrer" data-wa-general>WhatsApp</a>
         <a class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md bg-jungle-gold px-3 py-3 text-sm font-bold text-jungle-black" href="#booking"><span data-lang="en">Book</span><span data-lang="es">Reservar</span></a>
         <a class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md border border-white/20 px-3 py-3 text-sm font-bold text-jungle-mist" href="#experiences"><span data-lang="en">Packages</span><span data-lang="es">Paquetes</span></a>
       </div>
     </div>
 
     <script>
-      const generalWhatsAppEn = 'https://wa.me/529982053527?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20pricing%3F';
-      const generalWhatsAppEs = 'https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20reservar%20una%20experiencia%20Kin-Ha%20de%20cenotes%20y%20selva.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precios%3F';
+      const generalWhatsAppEn = 'https://wa.me/529982053527?text=Hi%2C%20I%E2%80%99m%20interested%20in%20booking%20a%20Kin-Ha%20cenote%20and%20jungle%20experience.%20Can%20you%20confirm%20availability%2C%20pickup%20and%20final%20price%3F';
+      const generalWhatsAppEs = 'https://wa.me/529982053527?text=Hola%2C%20me%20interesa%20reservar%20una%20experiencia%20Kin-Ha%20de%20cenotes%20y%20selva.%20%C2%BFMe%20pueden%20confirmar%20disponibilidad%2C%20pickup%20y%20precio%20final%3F';
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       const applyLanguage = (lang) => {
@@ -946,13 +937,14 @@
         });
       });
 
-      const mapButton = document.querySelector('[data-map-load]');
+      const mapButtons = document.querySelectorAll('[data-map-load]');
       const mapTarget = document.querySelector('[data-map-target]');
-      if (mapButton && mapTarget) {
-        mapButton.addEventListener('click', () => {
-          mapTarget.innerHTML = '<iframe title="Kin-Ha map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Cenote%20Kin-Ha%20Puerto%20Morelos&output=embed"></iframe>';
-        }, { once: true });
-      }
+      const loadMap = () => {
+        if (!mapTarget || mapTarget.dataset.loaded === 'true') return;
+        mapTarget.dataset.loaded = 'true';
+        mapTarget.innerHTML = '<iframe title="Kin-Ha map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Cenote%20Kin-Ha%20Puerto%20Morelos&output=embed"></iframe>';
+      };
+      mapButtons.forEach((button) => button.addEventListener('click', loadMap));
 
       if (!prefersReducedMotion) {
         document.documentElement.classList.add('motion-ready');
@@ -966,17 +958,6 @@
         }, { threshold: 0.12 });
 
         document.querySelectorAll('[data-reveal]').forEach((element) => revealObserver.observe(element));
-
-        const parallaxLayers = Array.from(document.querySelectorAll('[data-parallax]'));
-        const updateParallax = () => {
-          const offset = window.scrollY || 0;
-          parallaxLayers.forEach((layer) => {
-            const speed = Number(layer.dataset.parallax || 0);
-            layer.style.setProperty('--parallax', (offset * speed).toFixed(2));
-          });
-        };
-        updateParallax();
-        window.addEventListener('scroll', updateParallax, { passive: true });
       } else {
         document.querySelectorAll('[data-reveal]').forEach((element) => element.classList.add('is-visible'));
       }
