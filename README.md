@@ -7,6 +7,7 @@ Static bilingual SEO website for Mexico Jungle Tours, an independent tour operat
 - Static HTML
 - Shared CSS in `assets/site.css`
 - Small vanilla JavaScript in `assets/site.js` for WhatsApp links, package filters, lazy map loading and mobile CTAs
+- Optimized WebP photography in `assets/photos/` generated from authentic Kin-Ha / Mexico Jungle Tours source images
 - GitHub Pages and Cloudflare static hosting compatible
 - No build step required for deployment
 
@@ -38,6 +39,7 @@ The site can also be opened directly from `index.html`, but a tiny local server 
 
 - WhatsApp Business number is wired as `https://wa.me/529982053527`.
 - Keep all imagery sourced from real Kin-Ha files in `assets/`.
+- Use SEO-safe lowercase WebP derivatives in `assets/photos/` for production pages; keep raw photo filenames as source assets only.
 - Add an approved GHL/CRM embed only when the booking form is ready.
 - Add Stripe or checkout links only when real payment links are available.
 - Add confirmed business address, coordinates and hours to structured data if they should be public.

@@ -607,7 +607,7 @@ h1 {
 .contrast {
   background:
     linear-gradient(135deg, rgba(13, 40, 24, .94), rgba(20, 56, 34, .96)),
-    url("/assets/cenote-kinha-ruta-de-los-cenotes.jpg") center/cover;
+    url("/assets/photos/cenote-kinha-ruta-de-los-cenotes-1800.webp") center/cover;
   color: var(--mist);
 }
 
@@ -682,11 +682,12 @@ h1 {
 
 .gallery {
   align-items: stretch;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
 }
 
 .gallery figure {
   display: grid;
-  grid-template-rows: minmax(260px, 1fr) auto;
+  grid-template-rows: auto auto;
   margin: 0;
   overflow: hidden;
   border: 1px solid rgba(13, 40, 24, .1);
@@ -696,8 +697,7 @@ h1 {
 
 .gallery img {
   width: 100%;
-  height: 100%;
-  min-height: 260px;
+  height: clamp(240px, 31vw, 390px);
   object-fit: cover;
 }
 
@@ -707,6 +707,23 @@ h1 {
   color: var(--green-950);
   font-size: .9rem;
   font-weight: 850;
+}
+
+.media-card {
+  align-content: start;
+}
+
+.media-card figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--limestone);
+}
+
+.media-card img {
+  width: 100%;
+  height: clamp(220px, 26vw, 320px);
+  object-fit: cover;
 }
 
 .map-layout {
@@ -874,6 +891,21 @@ details p {
     width: calc(100% - 32px);
     padding-top: 34px;
   }
+
+  .hero-note span {
+    display: none;
+  }
+}
+
+@media (max-width: 979px) {
+  .hero-media {
+    order: -1;
+    min-height: clamp(230px, 58vw, 390px);
+  }
+
+  .hero-media img {
+    min-height: clamp(230px, 58vw, 390px);
+  }
 }
 
 @media (min-width: 720px) {
@@ -883,6 +915,23 @@ details p {
 
   .floating-wa {
     display: inline-flex;
+  }
+}
+
+@media (min-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .gallery figure {
+    grid-column: span 2;
+  }
+
+  .gallery figure:nth-child(1),
+  .gallery figure:nth-child(2),
+  .gallery figure:nth-child(7),
+  .gallery figure:nth-child(12) {
+    grid-column: span 3;
   }
 }
 

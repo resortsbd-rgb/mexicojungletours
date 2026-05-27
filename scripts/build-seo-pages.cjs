@@ -4,15 +4,68 @@ const path = require("path");
 const domain = "https://mexicojungletours.com";
 const out = (...parts) => path.join(__dirname, "..", ...parts);
 
+function photo(slug, width, height, variants, sizes, alt = {}) {
+  const srcset = variants.map((variant) => `/assets/photos/${slug}-${variant}.webp ${variant}w`).join(", ");
+  const largest = variants[variants.length - 1];
+  return {
+    src: `/assets/photos/${slug}-${largest}.webp`,
+    width,
+    height,
+    srcset,
+    sizes,
+    alt,
+  };
+}
+
 const images = {
-  hero: { src: "/assets/cenote-blanca-flor-puerto-morelos.jpg", width: 3648, height: 2432 },
-  cenote: { src: "/assets/cenote-kinha-ruta-de-los-cenotes.jpg", width: 4512, height: 3000 },
-  atv: { src: "/assets/atv-jungle-splash-kinha.jpg", width: 2000, height: 1333 },
-  horseback: { src: "/assets/horseback-riding-puerto-morelos-jungle.jpg", width: 4512, height: 3000 },
-  zipline: { src: "/assets/zipline-over-cenote-water-kinha.jpg", width: 1124, height: 750 },
-  family: { src: "/assets/family-kinha-sign-puerto-morelos.jpg", width: 720, height: 480 },
-  jump: { src: "/assets/cenote-jump-kinha-puerto-morelos.jpg", width: 1400, height: 1050 },
-  guidedZip: { src: "/assets/guided-zipline-kinha-helmet.jpg", width: 720, height: 480 },
+  hero: photo("hero-atv-adventure-riviera-maya", 1800, 1200, [640, 960, 1400, 1800], "(max-width: 979px) calc(100vw - 32px), 48vw", {
+    en: "Helmeted guests riding an ATV through the Puerto Morelos jungle near Cancun",
+    es: "Visitantes con casco en ATV por la selva de Puerto Morelos cerca de Cancun",
+  }),
+  cenote: photo("cenote-kinha-ruta-de-los-cenotes", 1800, 1197, [640, 960, 1400, 1800], "(max-width: 720px) 100vw, 50vw", {
+    en: "Guests swimming in Kin-Ha Cenote near Puerto Morelos",
+    es: "Visitantes nadando en Cenote Kin-Ha cerca de Puerto Morelos",
+  }),
+  blancaFlor: photo("cenote-blanca-flor-puerto-morelos", 1800, 1200, [640, 960, 1400, 1800], "(max-width: 720px) 100vw, 50vw", {
+    en: "Blanca Flor cenote experience near Cancun and Puerto Morelos",
+    es: "Experiencia en Cenote Blanca Flor cerca de Cancun y Puerto Morelos",
+  }),
+  atv: photo("atv-jungle-tour-cancun-riviera-maya", 1400, 933, [640, 960, 1400], "(max-width: 720px) 100vw, 50vw", {
+    en: "ATV jungle tour near Cancun and Riviera Maya",
+    es: "Tour de ATV por la selva cerca de Cancun y Riviera Maya",
+  }),
+  horseback: photo("horseback-riding-puerto-morelos-jungle-trail", 1800, 1197, [640, 960, 1400, 1800], "(max-width: 720px) 100vw, 50vw", {
+    en: "Horseback riding tour through the Puerto Morelos jungle",
+    es: "Paseo a caballo por la selva de Puerto Morelos",
+  }),
+  zipline: photo("zipline-over-cenote-water-kinha", 1124, 750, [640, 960, 1124], "(max-width: 720px) 100vw, 50vw", {
+    en: "Zipline adventure at Kin-Ha jungle park over cenote water",
+    es: "Aventura de tirolesa en Kin-Ha sobre agua de cenote",
+  }),
+  zipLineRoute: photo("zip-line-adventure-kinha-jungle", 1800, 1200, [640, 960, 1400, 1800], "(max-width: 720px) 100vw, 50vw", {
+    en: "Zipline route through the Kin-Ha jungle near Puerto Morelos",
+    es: "Ruta de tirolesa por la selva Kin-Ha cerca de Puerto Morelos",
+  }),
+  family: photo("family-kinha-sign-ruta-de-los-cenotes", 720, 480, [480, 720], "(max-width: 720px) 100vw, 360px", {
+    en: "Family at the Kin-Ha sign on Ruta de los Cenotes",
+    es: "Familia en las letras Kin-Ha en Ruta de los Cenotes",
+  }),
+  familyZipline: photo("family-zipline-jungle-riviera-maya", 1800, 1200, [640, 960, 1400, 1800], "(max-width: 720px) 100vw, 50vw", {
+    en: "Family zipline moment in the Riviera Maya jungle",
+    es: "Momento familiar en tirolesa en la selva de Riviera Maya",
+  }),
+  jump: photo("kinha-cenote-jumping-puerto-morelos", 1400, 1050, [640, 960, 1400], "(max-width: 720px) 100vw, 50vw", {
+    en: "Guest jumping into a Kin-Ha cenote in Puerto Morelos",
+    es: "Visitante saltando a un cenote Kin-Ha en Puerto Morelos",
+  }),
+  coupleJump: photo("kinha-couple-jumping-cenote-puerto-morelos", 640, 960, [480, 640], "(max-width: 720px) 100vw, 320px", {
+    en: "Guests jumping into a Kin-Ha cenote near Puerto Morelos",
+    es: "Visitantes saltando a un cenote Kin-Ha cerca de Puerto Morelos",
+  }),
+  guidedZip: photo("guided-zipline-helmet-kinha-safety", 720, 480, [480, 720], "(max-width: 720px) 100vw, 360px", {
+    en: "Helmeted guest with guide support on the Kin-Ha zipline route",
+    es: "Visitante con casco y apoyo de guia en la ruta de tirolesa Kin-Ha",
+  }),
 };
 
 const urls = {
@@ -158,7 +211,7 @@ const t = {
       ["Ritmo de selva en grupo pequeño", "La ruta está diseñada para sentirse personal, guiada y conectada con la tierra."],
     ],
     galleryTitle: "Cenotes reales. Selva real. Reserva clara.",
-    galleryCopy: "Agua dulce, piedra caliza, splash en ATV, plataformas de tirolesa, senderos con caballos y momentos familiares en la ruta de Puerto Morelos.",
+    galleryCopy: "Agua dulce, piedra caliza, recorridos en ATV, plataformas de tirolesa, senderos con caballos y momentos familiares en la ruta de Puerto Morelos.",
     locationTitle: "Ruta de los Cenotes, Puerto Morelos",
     locationCopy: "La experiencia opera en el área de la Ruta de los Cenotes de Puerto Morelos, con coordinación de pickup desde Cancún, Playa del Carmen y Puerto Morelos.",
     confirmPickup: "Confirma tu zona de pickup por WhatsApp antes del pago.",
@@ -194,7 +247,7 @@ const t = {
 const packages = {
   cenotes: {
     route: "cenotes",
-    image: images.cenote,
+    image: images.blancaFlor,
     waKey: "cenotes",
     en: {
       name: "Kin-Ha and Blanca Flor Cenotes",
@@ -309,8 +362,10 @@ function abs(url) {
 }
 
 function imgTag(image, alt, options = {}) {
-  const loading = options.eager ? 'fetchpriority="high"' : 'loading="lazy"';
-  return `<img src="${image.src}" width="${image.width}" height="${image.height}" alt="${esc(alt)}" ${loading}>`;
+  const loading = options.eager ? 'fetchpriority="high" loading="eager"' : 'loading="lazy"';
+  const sizes = options.sizes || image.sizes;
+  const responsive = image.srcset ? ` srcset="${image.srcset}"${sizes ? ` sizes="${esc(sizes)}"` : ""}` : "";
+  return `<img src="${image.src}"${responsive} width="${image.width}" height="${image.height}" alt="${esc(alt)}" ${loading} decoding="async">`;
 }
 
 function waAttrs(lang, key) {
@@ -377,7 +432,7 @@ function header(lang, pairKey = "home") {
 }
 
 function breadcrumbNav(breadcrumbs, lang) {
-  if (!breadcrumbs || breadcrumbs.length === 0) return "";
+  if (!breadcrumbs || breadcrumbs.length <= 1) return "";
   const label = lang === "en" ? "Breadcrumb" : "Ruta de navegacion";
   const items = breadcrumbs.map((crumb, index) => {
     const isLast = index === breadcrumbs.length - 1;
@@ -400,7 +455,7 @@ function packageCard(key, lang) {
   const optional = p.optional ? `<div><p class="mini-label">${esc(c.optional)}</p><ul class="plain-list">${p.optional.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></div>` : "";
   const duration = p.duration ? `<p class="note">${esc(p.duration)}</p>` : "";
   return `<article class="package-card" data-route="${pkg.route}">
-    <a class="package-image" href="${p.slug}">${imgTag(pkg.image, alt)}</a>
+    <a class="package-image" href="${p.slug}">${imgTag(pkg.image, alt, { sizes: "(max-width: 720px) 100vw, (max-width: 1180px) 50vw, 380px" })}</a>
     <div class="package-body">
       <span class="package-kicker">${esc(key === "signature" ? c.filterSignature : key === "horseback" ? c.filterHorse : key === "atv" ? c.filterAtv : c.filterCenote)}</span>
       <h3><a href="${p.slug}">${esc(p.name)}</a></h3>
@@ -503,6 +558,49 @@ function gallery(lang) {
   </section>`;
 }
 
+function galleryRich(lang) {
+  const items = lang === "en"
+    ? [
+      [images.hero, "ATV jungle tour near Cancun and Riviera Maya", "Helmeted guests riding an ATV through the Puerto Morelos jungle"],
+      [images.blancaFlor, "Blanca Flor cenote water and limestone walls", "Blanca Flor cenote experience near Cancun and Puerto Morelos"],
+      [images.cenote, "Kin-Ha cenote immersion", "Guests swimming in Kin-Ha Cenote near Puerto Morelos"],
+      [images.zipline, "Zipline over cenote water", "Zipline adventure at Kin-Ha jungle park over cenote water"],
+      [images.horseback, "Horseback route through shaded jungle trails", "Horseback riding tour through the Puerto Morelos jungle"],
+      [images.atv, "ATV route with real jungle terrain", "ATV riders crossing water on the Kin-Ha jungle route near Puerto Morelos"],
+      [images.jump, "Cenote jump on the Kin-Ha route", "Guest jumping into a Kin-Ha cenote in Puerto Morelos"],
+      [images.guidedZip, "Helmet, guide support and zipline briefing", "Helmeted guest with guide support on the Kin-Ha zipline route"],
+      [images.familyZipline, "Family zipline moment in the Riviera Maya jungle", "Family zipline moment in the Riviera Maya jungle near Puerto Morelos"],
+      [images.family, "Family arrival at the Kin-Ha letters", "Family at the Kin-Ha sign on Ruta de los Cenotes"],
+      [images.zipLineRoute, "Zipline route through jungle canopy", "Zipline route through the Kin-Ha jungle near Puerto Morelos"],
+      [images.coupleJump, "Guests jumping into a Kin-Ha cenote", "Guests jumping into a Kin-Ha cenote near Puerto Morelos"],
+    ]
+    : [
+      [images.hero, "ATV por la selva cerca de Cancun y Riviera Maya", "Visitantes con casco en ATV por la selva de Puerto Morelos"],
+      [images.blancaFlor, "Agua de Cenote Blanca Flor y piedra caliza", "Experiencia en Cenote Blanca Flor cerca de Cancun y Puerto Morelos"],
+      [images.cenote, "Nado en Cenote Kin-Ha", "Visitantes nadando en Cenote Kin-Ha cerca de Puerto Morelos"],
+      [images.zipline, "Tirolesa sobre agua de cenote", "Aventura de tirolesa en Kin-Ha sobre agua de cenote"],
+      [images.horseback, "Ruta a caballo por senderos de selva", "Paseo a caballo por la selva de Puerto Morelos"],
+      [images.atv, "Ruta ATV con terreno real de selva", "Personas en ATV cruzando agua en la ruta de selva Kin-Ha cerca de Puerto Morelos"],
+      [images.jump, "Salto a cenote en la Ruta Kin-Ha", "Visitante saltando a un cenote Kin-Ha en Puerto Morelos"],
+      [images.guidedZip, "Casco, guia y apoyo en tirolesa", "Visitante con casco y apoyo de guia en la ruta de tirolesa Kin-Ha"],
+      [images.familyZipline, "Momento familiar en tirolesa en Riviera Maya", "Momento familiar en tirolesa en la selva de Riviera Maya cerca de Puerto Morelos"],
+      [images.family, "Familia en las letras Kin-Ha", "Familia en las letras Kin-Ha en Ruta de los Cenotes"],
+      [images.zipLineRoute, "Ruta de tirolesa entre selva", "Ruta de tirolesa por la selva Kin-Ha cerca de Puerto Morelos"],
+      [images.coupleJump, "Visitantes saltando a un cenote Kin-Ha", "Visitantes saltando a un cenote Kin-Ha cerca de Puerto Morelos"],
+    ];
+  const c = t[lang];
+  return `<section class="section visual-band">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">${lang === "en" ? "Real route images" : "Imagenes reales de la ruta"}</span>
+        <h2>${esc(c.galleryTitle)}</h2>
+        <p>${esc(c.galleryCopy)}</p>
+      </div>
+      <div class="gallery">${items.map(([image, caption, alt]) => `<figure>${imgTag(image, alt, { sizes: "(max-width: 720px) 100vw, (max-width: 1180px) 50vw, 380px" })}<figcaption>${esc(caption)}</figcaption></figure>`).join("")}</div>
+    </div>
+  </section>`;
+}
+
 function locationSection(lang) {
   const c = t[lang];
   return `<section class="section" id="location">
@@ -538,11 +636,21 @@ function locationSection(lang) {
 
 function infoSections(lang) {
   const c = t[lang];
+  const preservationAlt = lang === "en" ? "Natural jungle and cenote environment at Kin-Ha near Puerto Morelos" : "Entorno natural de selva y cenote en Kin-Ha cerca de Puerto Morelos";
+  const safetyAlt = lang === "en" ? "Helmeted zipline guest with guide support on the Kin-Ha route" : "Visitante con casco y apoyo de guia en la ruta Kin-Ha";
   return `<section class="section-tight">
     <div class="container">
       <div class="info-grid">
-        <article class="info-card"><h2>${esc(c.preservationTitle)}</h2><p>${esc(c.preservationCopy)}</p></article>
-        <article class="info-card"><h2>${esc(c.safetyTitle)}</h2><ul class="plain-list">${c.safety.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></article>
+        <article class="info-card media-card">
+          <figure>${imgTag(images.cenote, preservationAlt, { sizes: "(max-width: 720px) 100vw, 560px" })}</figure>
+          <h2>${esc(c.preservationTitle)}</h2>
+          <p>${esc(c.preservationCopy)}</p>
+        </article>
+        <article class="info-card media-card">
+          <figure>${imgTag(images.guidedZip, safetyAlt, { sizes: "(max-width: 720px) 100vw, 560px" })}</figure>
+          <h2>${esc(c.safetyTitle)}</h2>
+          <ul class="plain-list">${c.safety.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>
+        </article>
       </div>
     </div>
   </section>`;
@@ -664,7 +772,7 @@ function hero(lang, options = {}) {
   const title = options.heroTitle || c.heroTitle;
   const sub = options.heroSub || c.heroSub;
   const image = options.image || images.hero;
-  const alt = lang === "en" ? "Natural cenote water and limestone walls in Puerto Morelos on Ruta de los Cenotes" : "Agua natural de cenote y paredes de piedra caliza en Puerto Morelos en Ruta de los Cenotes";
+  const alt = options.heroAlt || image.alt?.[lang] || (lang === "en" ? "Authentic Puerto Morelos jungle and cenote tour experience near Cancun" : "Experiencia autentica de selva y cenotes en Puerto Morelos cerca de Cancun");
   return `<section class="hero">
     <div class="hero-grid">
       <div class="hero-copy">
@@ -707,7 +815,7 @@ function homePage(lang, pathUrl, rootXDefault = false) {
       ${packagesSection(lang)}
       ${differentiators(lang)}
       ${compareSection(lang)}
-      ${gallery(lang)}
+      ${galleryRich(lang)}
       ${locationSection(lang)}
       ${infoSections(lang)}
       ${faqSection(lang)}
@@ -738,7 +846,7 @@ function landingPage({ lang, key, pathUrl, pairKey, title, description, heroTitl
       <section class="value-strip"><div class="container"><div class="value-grid">${c.trust.map((item) => `<span>${esc(item)}</span>`).join("")}</div></div></section>
       ${packagesSection(lang, pkgKey)}
       ${key === "ruta" ? differentiators(lang) : ""}
-      ${gallery(lang)}
+      ${galleryRich(lang)}
       ${locationSection(lang)}
       ${infoSections(lang)}
       <section class="section-tight"><div class="container"><div class="section-head"><span class="eyebrow">${lang === "en" ? "More routes" : "Más rutas"}</span><h2>${lang === "en" ? "Explore related Puerto Morelos experiences" : "Explora experiencias relacionadas en Puerto Morelos"}</h2></div><div class="landing-grid">${landingLinks}</div></div></section>
@@ -779,8 +887,8 @@ const pages = [
   [urls.esHome, homePage("es", urls.esHome)],
   [urls.enAtv, landingPage({ lang: "en", key: "atv", pathUrl: urls.enAtv, pairKey: "atv", title: "ATV Zipline Cenote Tour Cancun | Mexico Jungle Tours", description: "Book an ATV, zipline and cenote tour near Cancun with Puerto Morelos jungle routes, Kin-Ha and Blanca Flor cenote access, lunch and pickup coordination.", heroTitle: "ATV Zipline Cenote Tour Near Cancun", heroSub: "Jungle ATV route, ziplines and Kin-Ha plus Blanca Flor cenote access in Puerto Morelos, with pickup coordination from Cancun, Playa del Carmen and Puerto Morelos.", image: images.atv })],
   [urls.esAtv, landingPage({ lang: "es", key: "atv", pathUrl: urls.esAtv, pairKey: "atv", title: "Tour ATV Tirolesa y Cenotes Cancún | Mexico Jungle Tours", description: "Reserva tour de ATV, tirolesas y cenotes cerca de Cancún con ruta de selva en Puerto Morelos, acceso a Kin-Ha y Blanca Flor, lunch y pickup.", heroTitle: "Tour ATV, Tirolesas y Cenotes Cerca de Cancún", heroSub: "Ruta ATV por la selva, tirolesas y acceso a Cenote Kin-Ha y Blanca Flor en Puerto Morelos, con coordinación de pickup desde Cancún, Playa del Carmen y Puerto Morelos.", image: images.atv })],
-  [urls.enCenote, landingPage({ lang: "en", key: "cenotes", pathUrl: urls.enCenote, pairKey: "cenote", title: "Puerto Morelos Cenote Tour | Kin-Ha and Blanca Flor", description: "Book a Puerto Morelos cenote tour with Kin-Ha and Blanca Flor access, snorkeling, certified guide, lockers and rest areas.", heroTitle: "Puerto Morelos Cenote Tour", heroSub: "Natural cenote swimming with Kin-Ha and Blanca Flor access, snorkeling, certified guide, lockers and rest areas in Ruta de los Cenotes.", image: images.cenote })],
-  [urls.esCenote, landingPage({ lang: "es", key: "cenotes", pathUrl: urls.esCenote, pairKey: "cenote", title: "Cenotes Puerto Morelos | Kin-Ha y Blanca Flor", description: "Reserva tour de cenotes en Puerto Morelos con acceso a Kin-Ha y Blanca Flor, snorkel, guía certificado, lockers y áreas de descanso.", heroTitle: "Cenotes en Puerto Morelos", heroSub: "Nado en cenotes naturales con acceso a Kin-Ha y Blanca Flor, snorkel, guía certificado, lockers y áreas de descanso en Ruta de los Cenotes.", image: images.cenote })],
+  [urls.enCenote, landingPage({ lang: "en", key: "cenotes", pathUrl: urls.enCenote, pairKey: "cenote", title: "Puerto Morelos Cenote Tour | Kin-Ha and Blanca Flor", description: "Book a Puerto Morelos cenote tour with Kin-Ha and Blanca Flor access, snorkeling, certified guide, lockers and rest areas.", heroTitle: "Puerto Morelos Cenote Tour", heroSub: "Natural cenote swimming with Kin-Ha and Blanca Flor access, snorkeling, certified guide, lockers and rest areas in Ruta de los Cenotes.", image: images.blancaFlor })],
+  [urls.esCenote, landingPage({ lang: "es", key: "cenotes", pathUrl: urls.esCenote, pairKey: "cenote", title: "Cenotes Puerto Morelos | Kin-Ha y Blanca Flor", description: "Reserva tour de cenotes en Puerto Morelos con acceso a Kin-Ha y Blanca Flor, snorkel, guía certificado, lockers y áreas de descanso.", heroTitle: "Cenotes en Puerto Morelos", heroSub: "Nado en cenotes naturales con acceso a Kin-Ha y Blanca Flor, snorkel, guía certificado, lockers y áreas de descanso en Ruta de los Cenotes.", image: images.blancaFlor })],
   [urls.enHorse, landingPage({ lang: "en", key: "horseback", pathUrl: urls.enHorse, pairKey: "horseback", title: "Horseback Riding Cenote Tour Puerto Morelos", description: "Book horseback riding through Puerto Morelos jungle trails with cenote access, certified guide, regional Mexican lunch and pickup coordination.", heroTitle: "Horseback Riding & Cenotes in Puerto Morelos", heroSub: "Ride shaded jungle trails and access natural cenotes with certified guide, regional Mexican lunch, lockers and pickup coordination.", image: images.horseback })],
   [urls.esHorse, landingPage({ lang: "es", key: "horseback", pathUrl: urls.esHorse, pairKey: "horseback", title: "Caballos y Cenotes Puerto Morelos | Mexico Jungle Tours", description: "Reserva paseo a caballo por senderos de selva en Puerto Morelos con acceso a cenotes, guía certificado, lunch regional y pickup.", heroTitle: "Caballos y Cenotes en Puerto Morelos", heroSub: "Paseo a caballo por senderos de selva y acceso a cenotes naturales con guía certificado, lunch regional, lockers y coordinación de pickup.", image: images.horseback })],
   [urls.enRuta, landingPage({ lang: "en", key: "ruta", pathUrl: urls.enRuta, pairKey: "ruta", title: "Ruta de los Cenotes Puerto Morelos Tours | Mexico Jungle Tours", description: "Explore Ruta de los Cenotes Puerto Morelos tours with cenotes, ATV routes, ziplines, horseback riding, regional lunch and pickup coordination.", heroTitle: "Ruta de los Cenotes Puerto Morelos Tours", heroSub: "Plan an authentic Puerto Morelos jungle route with natural cenotes, ATV, ziplines, horseback riding, regional Mexican lunch and pickup coordination.", image: images.hero })],
@@ -790,7 +898,7 @@ const pages = [
 for (const [url, html] of pages) writePage(url, html);
 
 const sitemapUrls = pages.map(([url]) => url);
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.map((url) => `  <url>\n    <loc>${abs(url)}</loc>\n    <lastmod>2026-05-25</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${url === "/" ? "1.0" : url === "/en/" || url === "/es/" ? "0.95" : "0.85"}</priority>\n  </url>`).join("\n")}\n</urlset>\n`;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.map((url) => `  <url>\n    <loc>${abs(url)}</loc>\n    <lastmod>2026-05-27</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${url === "/" ? "1.0" : url === "/en/" || url === "/es/" ? "0.95" : "0.85"}</priority>\n  </url>`).join("\n")}\n</urlset>\n`;
 fs.writeFileSync(out("sitemap.xml"), sitemap, "utf8");
 
 fs.writeFileSync(out("robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${domain}/sitemap.xml\n`, "utf8");
